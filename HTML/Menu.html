@@ -3,11 +3,86 @@
 <head>
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-</head>
+    #myInput {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    #myUL {
+      list-style-type: none;
+      padding: 12px;
+      text-align: center;
+    }
+
+    #myUL li {
+      display: inline-block;
+      margin: 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #myUL li a {
+      border: 1px solid #ddd;
+      background-color: #eee;
+      padding: 12px;
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      border-radius: 12px;
+      min-width: 100%;
+      box-shadow: 4px 4px #D7E5F0;
+      margin-bottom: 12px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+    }
+
+
+    #myUL li a:hover:not(.header) {
+      background-color: #eee;
+    }
+    #myUL li a span {
+      display: block;
+      line-height: inherit;
+      font-size: 2rem;
+    }
+
+    #myInput {
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      width: 100%;
+      font-size: 16px;
+      padding: 12px 20px 12px 40px;
+      border: 1px solid #ddd;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 500px){
+      #myUL li a {
+        min-width: 15rem;
+        min-height: 20rem;
+        text-align: center;
+      }
+      #myUL li a img {
+        width: 30rem;
+        height: 20rem;
+      }
+    }
+
+    @media (max-width: 499px) {
+      body, #myUL li a , #myUl li {
+        margin: 0;
+      }
+    }
+  </style>
 <body>
 
 <h2 style="color: cornflowerblue; text-align: center">Menu</h2>
@@ -15,13 +90,19 @@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
 
 <ul id="myUL">
-  <li id="italian"><a href="#"><img alt="Italian" src="https://th.bing.com/th/id/R.f54151e64a0634920de394b02d977025?rik=iUjPShv3uu2qMQ&pid=ImgRaw&r=0"><span>Italian</span></a></li>
+  <li id="Italian"><a href="#"><img alt="Italian" src="https://th.bing.com/th/id/R.f54151e64a0634920de394b02d977025?rik=iUjPShv3uu2qMQ&pid=ImgRaw&r=0"><span>Italian</span></a></li>
   <li id="Chinese"><a href="#"><img alt="Chinese" src="https://th.bing.com/th/id/R.28316494c75a6045d3df671ea77aaa8e?rik=hG6C%2fQy6GIGQxg&riu=http%3a%2f%2fnovasiagsis.com%2fwp-content%2fuploads%2f2019%2f11%2fimage1.jpg&ehk=1RejiqUECsXk6wZdt4zzK1HpdMi7n2Cfbm2kU5UsaUc%3d&risl=&pid=ImgRaw&r=0"><Span>Chinese</Span></a></li>
   <li id="Spanish"><a href="#"><img alt="Spanish" src="https://www.thespruceeats.com/thmb/TiDkXB_a65wloZvEeAIBPQJjMAU=/1500x1000/filters:fill(auto,1)/GettyImages-929178284-5b76096fc9e77c00256bba55.jpg" ><Span>Spanish</Span></a></li>
+  <li id="Indian"><a href="#"><img alt="Indian" src="https://th.bing.com/th/id/OIP.YTIhuOFYuc0XIelga5TUTAHaE7?pid=ImgDet&rs=1" ><Span>Indian</Span></a></li>
+  <li id="French"><a href="#"><img alt="French" src="https://th.bing.com/th/id/R.81a64bb707959eb0eacb65e86b41e461?rik=kdjT83JKFLEY1A&riu=http%3a%2f%2fmediad.publicbroadcasting.net%2fp%2fkcur%2ffiles%2fstyles%2fx_large%2fpublic%2f201804%2fcafe_provence.jpg&ehk=8pQ3TC4w0WplL6%2bdbWB1DOYIFrWEQy1VDqtB0Q24cso%3d&risl=&pid=ImgRaw&r=0" ><Span>French</Span></a></li>
+  <li id="Korean"><a href="#"><img alt="Korean" src="https://th.bing.com/th/id/OIP.Od0eN_B-5-ivs1s7MlRYQAHaGO?pid=ImgDet&rs=1" ><Span>Korean</Span></a></li>
+  <li id="Thai"><a href="#"><img alt="Thai" src="https://idealmagazine.co.uk/wp-content/uploads/2017/05/rosas-thai.jpg" ><Span>Thai</Span></a></li>
+  <li id="German"><a href="#"><img alt="German" src="https://i2.wp.com/photos.smugmug.com/photos/i-czK3v64/0/922a609d/L/i-czK3v64-L.jpg" ><Span>German</Span></a></li>
   <li id="Fast Food"><a href="#"><img alt="Fast Food" src="https://bgr.com/wp-content/uploads/2020/09/bgrpic-copy-19.jpg?quality=70&strip=all" ><Span>Fast Food</Span></a></li>
   <li id="Desserts"><a href="#"><img alt="Desserts" src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Various-desserts-backgrounds-5120x3200.jpg" ><Span>Desserts</Span></a></li>
   <li id="Coffee"><a href="#"><img alt="Coffee" src="https://th.bing.com/th/id/OIP.P8v2VklHqNZC_OemwhFu_gHaFK?pid=ImgDet&rs=1" ><Span>Coffee</Span></a></li>
   <li id="Beverages"><a href="#"><img alt="Beverages" src="https://th.bing.com/th/id/OIP.fF-sJd9zDQw4rFvCMh1AhwHaE8?pid=ImgDet&rs=1" ><Span>Beverages</Span></a></li>
+
 </ul>
 
 <script>
@@ -42,8 +123,5 @@
     }
   }
 </script>
-
-
-
 </body>
 </html>
