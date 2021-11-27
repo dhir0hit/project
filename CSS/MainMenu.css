@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+#myInput {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 12px;
+    text-align: center;
+}
+
+#myUL li {
+    display: inline-block;
+    margin: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border-radius: 12px;
+    min-width: 100%;
+    box-shadow: 4px 4px #D7E5F0;
+    margin-bottom: 12px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+#myUL li a span {
+    display: block;
+    line-height: inherit;
+    font-size: 2rem;
+}
+
+#myInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+@media (min-width: 500px){
+    #myUL li a {
+        min-width: 15rem;
+        min-height: 20rem;
+        text-align: center;
+    }
+    #myUL li a img {
+        width: 30rem;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 499px) {
+    body, #myUL li a , #myUl li {
+        margin: 0;
+    }
+}

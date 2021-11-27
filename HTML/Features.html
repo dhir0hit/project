@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Features - Ember Restaurants</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- adding logo to title bar -->
+    <link rel="shortcut icon" href="../logo/Emberlogo.png">
+    <!-- adding google fonts online, so it can load in any browser -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- adding custom css to html page -->
+    <link rel="stylesheet" type="text/css" href="../CSS/Features.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+</head>
+<body>
+<!--Double header-->
+<div class="navigation_bar">
+<nav class="top_nav">
+    <div class="container">
+        <!-- navigation lists -->
+        <ul class=" me-auto">
+            <!------- add active to current page -------->
+            <li class="top_nav_list upper_nav_list"><a href="Index.html" aria-current="page">Home</a></li>
+            <li class="top_nav_list upper_nav_list active"><a href="#" >Features</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="#" >Menu</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+        </ul>
+        <ul class="nav">
+            <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
+            <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+        </ul>
+    </div>
+</nav>
+<header class="top_nav_header">
+    <div class="container justify-content-center">
+        <a href="#" class="link_a">
+            <img src="../logo/EmberMainLogo2.png" alt="logo">
+        </a>
+        <form id="Drop_down">
+            <!-- search bar for user help -->
+            <div id="SearchBar">
+                <input type="text" id="search_bar" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="filterFunction()">
+            </div>
+
+            <!-- adding links to searchbar dropdown -->
+            <div class="dropdown-content">
+                <a class="dropdown-link" href="Index.html">Index</a>
+                <a class="dropdown-link" href="Features.html">Features</a>
+                <a class="dropdown-link" href="#">menu</a>
+                <a class="dropdown-link" href="#">wow</a>
+                <a class="dropdown-link" href="#">amazing</a>
+                <a class="dropdown-link" href="#">Link</a>
+                <a class="dropdown-link" href="#">cool</a>
+            </div>
+        </form>
+    </div>
+</header>
+</div>
+    <!-- main content of page -->
+    <main class="content">
+        <img class="carousel" src="../pictures/EmberBackgroundPic.jpg" alt="Ember restaurants logo">
+        <div class="Main_Body">
+            <!-- features of restaurant -->
+            <div>
+                <div class="Ember_features">
+                    <h2 >Our new item in List, <span class="text-muted">Lemon Tart</span></h2>
+                    <p>Presenting New item in Ember Restaurant list, a dessert dish which have completely different flavour and will melt your heart with it's taste.</p>
+                </div>
+                <div class="Ember_features_img">
+                    <img src="../pictures/Desserts/LemonTart.jpg" width="500" height="500" alt="Delicious Lemon Tart with berries as topping">
+                </div>
+            </div>
+
+            <div>
+                <div class="Ember_features reverse">
+                    <h2 >Oh yeah, it’s that good, See for yourself. <span class="text-muted">Affogato</span></h2>
+                    <p>Another Dessert? Of course But it is Mix of coffee and Dessert "Affogato Al Caffe", Which can be found in Coffee menu or click on this button below.</p>
+                </div>
+                <div class="Ember_features_img reverse_img">
+                    <img src="../pictures/Coffee/Affogato.jpg" width="500" height="500" alt="making Affogato by pouring coffee on scoop of icecream">
+                </div>
+            </div>
+
+            <div>
+                <div class="Ember_features">
+                    <h2 >Feeling Hungry <span class="text-muted">We got you covered.</span></h2>
+                    <p>Freshly baked "pitas", with all the vegies you'll love, perfect for snack time.</p>
+                </div>
+                <div class="Ember_features_img">
+                    <img src="../pictures/FastFood/Pitas.jpg" width="500" height="500" alt="delicious pitas with veges as filling">
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!--footer of page-->
+<div class="footer_container">
+    <footer>
+        <div class="footer_content">
+            <a href="#" >
+                <img src="../logo/Emberlogo.png" width="30" height="24" alt="Ember logo">
+            </a>
+            <span class="text-muted">&copy; 2021 Ember Restaurants, Inc</span>
+        </div>
+
+        <ul class="social_media">
+            <li><a href="#"><img src="../logo/facebook-logo-black-transparent.png" width="24" height="24" alt="Ember's facebook account"></a></li>
+            <li><a href="#"><img src="../logo/Instagram-symbil.jpg" width="24" height="24" alt="Ember's Instagram account"></a></li>
+            <li><a href="#"><img src="../logo/Twitter-symbol.jpg" width="24" height="24" alt="Ember's Twitter account"></a></li>
+            <li id="get_on_top"><a href="#"><img src="../logo/Twitter-symbol.jpg" alt="Ember's Twitter account"></a></li>
+        </ul>
+    </footer>
+</div>
+<script src="../JavaScript/Search%20Filter.js"></script>
+
+
+
+</body>
+</html>

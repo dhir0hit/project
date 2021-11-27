@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- adding logo to title bar -->
+    <link rel="shortcut icon" href="../logo/Emberlogo.png">
+    <!-- adding google fonts online, so it can load in any browser -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- adding custom css to html page -->
+    <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/MainMenu.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+</head>
+<body>
+<!--Double header-->
+<div class="navigation_bar">
+<nav class="top_nav">
+    <div class="container flex-wrap">
+        <!-- navigation lists -->
+        <ul class=" me-auto">
+            <!-- add active class to current page -->
+            <li class="top_nav_list upper_nav_list active"><a href="#" aria-current="page">Home</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="#" >Features</a></li>
+            <!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
+            <li class="top_nav_list upper_nav_list"><a href="#" >Menu</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+        </ul>
+        <ul class="nav">
+            <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
+            <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+        </ul>
+    </div>
+</nav>
+<header class="top_nav_header" >
+    <div class="container justify-content-center">
+        <a href="#" class="link_a">
+            <img src="../logo/EmberMainLogo2.png" alt="logo">
+        </a>
+        <form id="Drop_down">
+            <!-- search bar for user help -->
+            <div id="SearchBar">
+                <input type="text" id="search_bar" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="filterFunction()">
+            </div>
+            <!-- adding links to searchbar dropdown -->
+            <div class="dropdown-content">
+                <a class="dropdown-link" href="Index.html">Index</a>
+                <a class="dropdown-link" href="Features.html">Features</a>
+                <a class="dropdown-link" href="#">menu</a>
+                <a class="dropdown-link" href="#">wow</a>
+                <a class="dropdown-link" href="#">amazing</a>
+                <a class="dropdown-link" href="#">Link</a>
+                <a class="dropdown-link" href="#">cool</a>
+            </div>
+        </form>
+    </div>
+</header>
+</div>
+<div class="main_body">
+    <!-- Side bar of page -->
+    <aside id="sidebar">
+        <button onclick="sideBar_close()">Close &times;</button>
+        <ul>
+            <!-- lists of sidebar content -->
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="https://cdn3.iconfinder.com/data/icons/restaurant-34/24/baking_pizza_food_italian_restaurant-512.png" alt="Italian food logo">
+                    <span>Italian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../pictures/SidebarLogo/Chienese.png" alt="Chinese food logo">
+                    <span>Chinese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../pictures/SidebarLogo/Thai.png" alt="Thai food logo">
+                    <span>Thai</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../pictures/SidebarLogo" alt="">
+                    <span>Indian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>French</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Korean</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Japanese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>German</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Spanish</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Fast Food</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Desserts</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Coffee</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Beverages</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="Main_Body">
+        <!-- main content of page -->
+        <main class="content">
+            <div class="sidebar_openButton">
+                <!-- button to open sidebar -->
+                <button onclick="sideBar_open()">&#9776;</button>
+            </div>
+            <!-- main body text -->
+            <div class="main_content">
+                <!-- visual content of page -->
+                <h2 style="color: cornflowerblue; text-align: center">Menu</h2>
+
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
+
+                <ul id="myUL">
+                    <li id="italian"><a href="#"><img alt="Italian" src="https://th.bing.com/th/id/R.f54151e64a0634920de394b02d977025?rik=iUjPShv3uu2qMQ&pid=ImgRaw&r=0"><span>Italian</span></a></li>
+                    <li id="Chinese"><a href="#"><img alt="Chinese" src="https://th.bing.com/th/id/R.28316494c75a6045d3df671ea77aaa8e?rik=hG6C%2fQy6GIGQxg&riu=http%3a%2f%2fnovasiagsis.com%2fwp-content%2fuploads%2f2019%2f11%2fimage1.jpg&ehk=1RejiqUECsXk6wZdt4zzK1HpdMi7n2Cfbm2kU5UsaUc%3d&risl=&pid=ImgRaw&r=0"><Span>Chinese</Span></a></li>
+                    <li id="Spanish"><a href="#"><img alt="Spanish" src="https://www.thespruceeats.com/thmb/TiDkXB_a65wloZvEeAIBPQJjMAU=/1500x1000/filters:fill(auto,1)/GettyImages-929178284-5b76096fc9e77c00256bba55.jpg" ><Span>Spanish</Span></a></li>
+                    <li id="FastFood"><a href="#"><img alt="Fast Food" src="https://bgr.com/wp-content/uploads/2020/09/bgrpic-copy-19.jpg?quality=70&strip=all" ><Span>Fast Food</Span></a></li>
+                    <li id="Desserts"><a href="#"><img alt="Desserts" src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Various-desserts-backgrounds-5120x3200.jpg" ><Span>Desserts</Span></a></li>
+                    <li id="Coffee"><a href="#"><img alt="Coffee" src="https://th.bing.com/th/id/OIP.P8v2VklHqNZC_OemwhFu_gHaFK?pid=ImgDet&rs=1" ><Span>Coffee</Span></a></li>
+                    <li id="Beverages"><a href="#"><img alt="Beverages" src="https://th.bing.com/th/id/OIP.fF-sJd9zDQw4rFvCMh1AhwHaE8?pid=ImgDet&rs=1" ><Span>Beverages</Span></a></li>
+                </ul>
+            </div>
+        </main>
+
+        <!--footer of page-->
+        <div class="footer_container">
+            <footer>
+                <div class="footer_content">
+                    <a href="#" >
+                        <img src="../logo/Emberlogo.png" width="30" height="24" alt="Ember logo">
+                    </a>
+                    <span class="text-muted">&copy; 2021 Ember Restaurants, Inc</span>
+                </div>
+
+                <ul class="social_media">
+                    <li><a href="#Spanish"><img src="../logo/facebook-logo-black-transparent.png" width="24" height="24" alt="Ember's facebook account"></a></li>
+                    <li><a href="#"><img src="../logo/Instagram-symbil.jpg" width="24" height="24" alt="Ember's Instagram account"></a></li>
+                    <li><a href="#"><img src="../logo/Twitter-symbol.jpg" width="24" height="24" alt="Ember's Twitter account"></a></li>
+                    <li id="get_on_top"><a href="#"><img src="../logo/TopSign.png" alt="Ember's Twitter account"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- adding script to file -->
+<script type="text/javascript" src="../JavaScript/SideBar.js"></script>
+<script type="text/javascript" src="../JavaScript/Search%20Filter.js"></script>
+<script type="text/javascript" src="../JavaScript/menuSearchFilter.js"></script>
+</body>
+</html>

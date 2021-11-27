@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+h3 {
+    color: #eccb0c;
+}
+/*====================================================================================*/
+/*lang change
+    ======================================================================================*/
+.upper_nav {
+    float: right;
+    overflow: hidden;
+    margin: 0 2em;
+}
+
+.upper_nav .drop_button {
+    border: none;
+    outline: none;
+    opacity: 0.7;
+    padding: 0.4em 0.7em;
+    background-color: #f5a011;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: monospace, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    color: #31525b;
+    font-weight: bold;
+}
+
+.upper_nav:hover .drop_button {
+    opacity: 1;
+}
+
+.select_lang {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 90px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.select_lang a {
+    float: none;
+    color: black;
+    font-family: monospace, "Gill Sans", "Gill Sans MT", "Trebuchet MS",
+    sans-serif;
+    text-transform: uppercase;
+    /*padding: 12px 16px;*/
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.select_lang a:hover {
+    background-color: #31525b;
+    color: #f9f9f9;
+}
+
+.upper_nav:hover .select_lang {
+    display: block;
+}
+/*=====================================================================================*/
+
+/*navigation bar
+    ========================================================================================*/
+.logo {
+    top: 0;
+    width: 200px;
+    float: left;
+    margin: 2em 0 0 2em;
+}
+
+#top_nav {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 110px;
+    line-height: 70px;
+    /*background: #b3dee5;*/
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    float: right;
+}
+
+nav.nav_bar ul li {
+    float: left;
+    list-style-type: none;
+    padding: 0 1em;
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+}
+nav.nav_bar ul li a {
+    background: #fff;
+    opacity: 0.7;
+    text-decoration: none;
+    font-family: monospace, "Gill Sans", "Gill Sans MT", "Trebuchet MS",
+    sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    padding: 0.4em 0.7em;
+    font-weight: bold;
+}
+nav.nav_bar ul li a:hover {
+    opacity: 1;
+}
+
+/*Main Content
+===============================================================================*/
+main{
+    line-height: 1.7;
+    box-sizing: border-box;
+    width: 80%;
+    padding: 40px;
+    margin: 100px auto;
+    font-family: monospace, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+iframe{
+    min-width: 100%;
+    height: 35em;
+}
+
+main h1 {
+    width: 100%;
+    background-color: #ffa101;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+picture img{
+    min-width: 100%;
+    display: block;
+    padding: 1em 0;
+}
+main h2{
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-bottom: 0.5em solid black;
+}
+main dl dt span, main dl dd ul li span{
+    float: right;
+    font-size: 1.2em;
+}
+main dl dt {
+    font-weight: bold;
+}
+main dl dd{
+    margin-left: 2em;
+}
+
+main dl dd li{
+    margin-left: 2em;
+}
+
+#orderbutton{
+    margin: 3em;
+    text-align: center;
+}
+#orderbutton a{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    padding: 1.5em 2em;
+    margin-top: 15em;
+    color: #31525b;
+    background-color: #ffa101;
+}
+
+#orderbutton a:hover{
+    color: #ffa101;
+    background-color: #31525b;
+}
+
+#orderbutton a:active{
+    color: #feaa00;
+    background-color: #feaa00;
+}
+
+/* footer
+ ================================================================================*/
+
+footer {
+    bottom: 0;
+    position: fixed;
+    background-color: rgb(234, 238, 238);
+    opacity: 0.5;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+footer p {
+    opacity: 1;
+    color: #080800;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+}

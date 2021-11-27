@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>order</title>
+</head>
+<body>
+    <main>
+        <form>
+            <label>
+                <input id="abc" type="text">
+            </label>
+            <button onclick="newFunc()">SEND</button>
+        </form>
+        <a href="otherOrder.html">link</a>
+    </main>
+<script>
+    function newFunc() {
+        localStorage.setItem("newitem", document.getElementById("abc").value);
+    }
+</script>
+</body>
+</html>

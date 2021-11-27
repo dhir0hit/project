@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ember Restaurants</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="shortcut icon" href="../logo/Emberlogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../CSS/Index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
+</head>
+<body>
+<nav class="top_nav">
+    <div class="container flex-wrap">
+        <ul class=" me-auto">
+            <li class="top_nav_list upper_nav_list active"><a href="#" aria-current="page">Home</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="Features.html" >Features</a></li>
+<!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
+            <li class="top_nav_list upper_nav_list"><a href="#" >Menu</a></li>
+            <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+        </ul>
+        <ul class="nav">
+            <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
+            <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+        </ul>
+    </div>
+</nav>
+<header class="top_nav_header" >
+    <div class="container justify-content-center">
+        <a href="#" class="link_a">
+            <img src="../logo/EmberMainLogo2.png" alt="logo">
+        </a>
+        <form id="Drop_down">
+            <div id="SearchBar">
+                <input type="text" id="search_bar" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="filterFunction()">
+            </div>
+            <div class="dropdown-content">
+                <a class="dropdown-link" href="Index.html">Index</a>
+                <a class="dropdown-link" href="Features.html">Features</a>
+                <a class="dropdown-link" href="#">menu</a>
+                <a class="dropdown-link" href="#">wow</a>
+                <a class="dropdown-link" href="#">amazing</a>
+                <a class="dropdown-link" href="#">Link</a>
+                <a class="dropdown-link" href="#">cool</a>
+            </div>
+        </form>
+    </div>
+</header>
+
+    <main class="content">
+        <img src="../logo/Emberlogo.png" alt="Ember restaurants logo">
+        <h3>Good ideas start with a good food </h3>
+        <h1>Eat good feel good</h1>
+        <p>
+           Part of the success is to eat what you like  <br>
+            And let the food fight it inside 
+        </p>
+        <br>
+        <div>
+        <a id="orderbutton" href="#">Order Now</a>
+        </div>
+    </main>
+<script type="javascript" src="../JavaScript/Search%20Filter.js"></script>
+
+</body>
+</html>
