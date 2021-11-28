@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script type="text/javascript" src="../../JavaScript/menuSearchFilter.js"></script>
+
     <!-- adding logo to title bar -->
     <link rel="shortcut icon" href="../../logo/Emberlogo.png">
     <!-- adding google fonts online, so it can load in any browser -->
@@ -18,21 +20,54 @@
 </head>
 <body>
 
+
+
     <h2 style="color: cornflowerblue; text-align: center">Menu</h2>
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
 
+    <div id="alert_items">
+        <div id="alert_info">
+            <p><strong id="alert_text">a</strong> added to item list</p>
+            <span class="close_button" >&times;</span>
+        </div>
+    </div>
+
+
     <ul id="myUL">
-        <li id="Affogato"><a href="#"><img alt="Affogato" src=""><span>Affogato</span></a></li>
-        <li id="Americano"><a href="#"><img alt="Americano" src=""><span>Americano</span></a></li>
-        <li id="Caffè latte"><a href="#"><img alt="Caffè latte" src=""><span>Caffè latte</span></a></li>
-        <li id="Caffè mocha"><a href="#"><img alt="Caffè mocha" src=""><span>Caffè mocha</span></a></li>
-        <li id="Cafè au lait"><a href="#"><img alt="Cafè au lait" src=""><span>Cafè au lait</span></a></li>
-        <li id="Cappuccino"><a href="#"><img alt="Cappuccino" src=""><span>Cappuccino</span></a></li>
-        <li id="Cold brew coffee"><a href="#"><img alt="Cold brew coffee" src=""><span>Cold brew coffee</span></a></li>
-        <li id="Double espresso "><a href="#"><img alt="Double espresso " src=""><span>Double espresso (Doppio)</span></a></li>
+        <li id="Affogato">
+            <a href="#"><img alt="Affogato" src="../../pictures/Coffee/Affogato.jpg"><span>Affogato</span></a>
+            <button onclick="alertItemOrder('Affogato')">Add To Order List</button>
+        </li>
+        <li id="Americano">
+            <a href="#"><img alt="Americano" src="../../pictures/Coffee/Americano.jpg"><span>Americano</span></a>
+            <button onclick="alertItemOrder('Americano')">Add To Order List</button>
+        </li>
+        <li id="Caffe_Latte">
+            <a href="#"><img alt="Caffè latte" src="../../pictures/Coffee/CaffeLatte.jpg"><span>Caffè latte</span></a>
+            <button onclick="alertItemOrder('Caffè latte')">Add To Order List</button>
+        </li>
+        <li id="Caffe_Mocha">
+            <a href="#"><img alt="Caffè mocha" src="../../pictures/Coffee/CaffeMocha.jpg"><span>Caffè mocha</span></a>
+            <button onclick="alertItemOrder('Caffè mocha')">Add To Order List</button>
+        </li>
+        <li id="Cafe_Au_Lait">
+            <a href="#"><img alt="Cafè au lait" src="../../pictures/Coffee/CafeAuLait.jpg"><span>Cafè au lait</span></a>
+            <button onclick="alertItemOrder('Cafè Au Lait')">Add To Order List</button>
+        </li>
+        <li id="Cappuccino">
+            <a href="#"><img alt="Cappuccino" src="../../pictures/Coffee/Cappuccino.jpg"><span>Cappuccino</span></a>
+            <button onclick="alertItemOrder('Cappuccino')">Add To Order List</button>
+        </li>
+        <li id="Cold_Brew_Coffee">
+            <a href="#"><img alt="Cold brew coffee" src="../../pictures/Coffee/ColdBrewCoffe.jpg"><span>Cold brew coffee</span></a>
+            <button onclick="alertItemOrder('Cold Brew Coffee')">Add To Order List</button>
+        </li>
+        <li id="Double_espresso">
+            <a href="#"><img alt="Double espresso " src="../../pictures/Coffee/DoubleEspresso.jpg"><span>Double espresso (Doppio)</span></a>
+            <button onclick="alertItemOrder('Double espresso')">Add To Order List</button>
+        </li>
     </ul>
 
-<script type="text/javascript" src="../../JavaScript/menuSearchFilter.js"></script>
 </body>
 </html>

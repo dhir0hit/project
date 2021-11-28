@@ -10,6 +10,36 @@
     margin-bottom: 12px;
 }
 
+
+#alert_items {
+    display: none;
+    float: right;
+    padding: 1rem 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    right: 0;
+    /*z-index: -1;*/
+    opacity: 1;
+    background-color: red;
+    transition: opacity 0.6s;
+}
+
+#alert_info {
+    display: none;
+
+}
+
+#alert_info span, #alert_info p {
+    display: inline-block;
+}
+
+.close_button {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
 #myUL {
     list-style-type: none;
     padding: 12px;
@@ -21,6 +51,7 @@
     margin: 2rem;
     text-align: center;
     overflow: hidden;
+    align-content: center;
 }
 
 #myUL li a {
@@ -39,6 +70,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#myUL li button {
+    display: block;
+    padding: 12px 7px;
+}
 
 #myUL li a:hover:not(.header) {
     background-color: #eee;
@@ -76,3 +111,18 @@
         margin: 0;
     }
 }
+
+/*// alert_info
+    new_alert_info.style.float = "right";
+    new_alert_info.style.padding = "1rem 2rem";
+    new_alert_info.style.position = "fixed";
+    new_alert_info.style.right = "2";
+    new_alert_info.style.opacity = "1";
+    new_alert_info.style.transition = "opacity 0.6s";
+    new_alert_info.style.background = "palegoldenrod";
+
+    // alert_info p
+    new_alert_info.children[0].style.display = "inline-block";
+
+    // alert_info p strong
+    new_alert_info.children[0].children[0].textContent = text;*/
