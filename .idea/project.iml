@@ -8,5 +8,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Lambton College II sem" />
+    <orderEntry type="module" module-name="WebTechnology" />
   </component>
 </module>

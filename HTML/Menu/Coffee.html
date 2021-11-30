@@ -20,6 +20,145 @@
 </head>
 <body>
 
+<!--Double header-->
+<div class="navigation_bar">
+    <nav class="top_nav">
+        <div class="container flex-wrap">
+            <!-- navigation lists -->
+            <ul class=" me-auto">
+                <!-- add active class to current page -->
+                <li class="top_nav_list upper_nav_list active"><a href="../Index.html" aria-current="page">Home</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../Features.html" >Features</a></li>
+                <!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
+                <li class="top_nav_list upper_nav_list"><a href="../MainMenu.html" >Menu</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+            </ul>
+            <ul class="nav">
+                <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
+                <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="top_nav_header" >
+        <div class="container justify-content-center">
+            <a href="#" class="link_a">
+                <img src="../../logo/EmberMainLogo2.png" alt="logo">
+            </a>
+            <form id="Drop_down">
+                <!-- search bar for user help -->
+                <div id="SearchBar">
+                    <input type="text" id="search_bar" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="filterFunction()">
+                </div>
+                <!-- adding links to searchbar dropdown -->
+                <div class="dropdown-content">
+                    <a class="dropdown-link" href="../Index.html">Index</a>
+                    <a class="dropdown-link" href="../Features.html">Features</a>
+                    <a class="dropdown-link" href="#">menu</a>
+                    <a class="dropdown-link" href="#">wow</a>
+                    <a class="dropdown-link" href="#">amazing</a>
+                    <a class="dropdown-link" href="#">Link</a>
+                    <a class="dropdown-link" href="#">cool</a>
+                </div>
+            </form>
+        </div>
+    </header>
+</div>
+<div class="main_body">
+    <!-- Side bar of page -->
+    <aside id="sidebar">
+        <button onclick="sideBar_close()">Close &times;</button>
+        <ul>
+            <!-- lists of sidebar content -->
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="https://cdn3.iconfinder.com/data/icons/restaurant-34/24/baking_pizza_food_italian_restaurant-512.png" alt="Italian food logo">
+                    <span>Italian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Chienese.png" alt="Chinese food logo">
+                    <span>Chinese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Thai.png" alt="Thai food logo">
+                    <span>Thai</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Indian.png" alt="Indian food Logo">
+                    <span>Indian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/French.png" alt="French food logo">
+                    <span>French</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Korean.png" alt="Korean food logo">
+                    <span>Korean</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Japanese.png" alt="Japanese food logo">
+                    <span>Japanese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/German.png" alt="German food logo">
+                    <span>German</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Spanish.jpg" alt="Spanish food logo">
+                    <span>Spanish</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Fast_food.jpg" alt="Fast food logo">
+                    <span>Fast Food</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="" alt="">
+                    <span>Desserts</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Coffee.png" alt="coffee logo">
+                    <span>Coffee</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="#">
+                    <img src="../../pictures/SidebarLogo/Beverages.jpg" alt="Beverages logo">
+                    <span>Beverages</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="Main_Body">
+        <!-- main content of page -->
+        <main class="content">
+            <div class="sidebar_openButton">
+                <!-- button to open sidebar -->
+                <button onclick="sideBar_open()">&#9776;</button>
+            </div>
+            <!-- main body text -->
+            <div class="main_content">
+                <!-- visual content of page -->
 
 
     <h2 style="color: cornflowerblue; text-align: center">Menu</h2>
@@ -68,5 +207,28 @@
         </li>
     </ul>
 
+            </div>
+        </main>
+
+        <!--footer of page-->
+        <div class="footer_container">
+            <footer>
+                <div class="footer_content">
+                    <a href="#" >
+                        <img src="../../logo/Emberlogo.png" width="30" height="24" alt="Ember logo">
+                    </a>
+                    <span class="text-muted">&copy; 2021 Ember Restaurants, Inc</span>
+                </div>
+
+                <ul class="social_media">
+                    <li><a href="#"><img src="../../logo/facebook-logo-black-transparent.png" width="24" height="24" alt="Ember's facebook account"></a></li>
+                    <li><a href="#"><img src="../../logo/Instagram-symbil.jpg" width="24" height="24" alt="Ember's Instagram account"></a></li>
+                    <li><a href="#"><img src="../../logo/Twitter-symbol.jpg" width="24" height="24" alt="Ember's Twitter account"></a></li>
+                    <li id="get_on_top"><a href="#"><img src="../../logo/TopSign.png" alt="Ember's Twitter account"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</div>
 </body>
 </html>
