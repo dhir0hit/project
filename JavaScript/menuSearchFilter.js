@@ -1,4 +1,5 @@
 var count  = 0
+
 function alertItemOrder(text) {
     count++;
     var alertText = document.getElementById("alert_text");
@@ -8,9 +9,6 @@ function alertItemOrder(text) {
     let new_alert_info = alertInfo.cloneNode(true);
     new_alert_info.id = text + "alert";
     alertItem.appendChild(new_alert_info);
-
-    // alert items
-    alertItem.style.display = "block";
 
     // alert_info
     // new_alert_info.style.float = "right";
@@ -29,7 +27,9 @@ function alertItemOrder(text) {
     // new_alert_info.children[1].style.display = "inline-block";
     new_alert_info.children[1].onclick = function () {
         new_alert_info.style.opacity = "0";
-        setTimeout(new_alert_info.style.display = "none");
+        setTimeout(function () {new_alert_info.style.display = "none"}, 600);
+        // setTimeout(function () {alertItem.style.display = "none"}, 600);
+
     };
 }
 

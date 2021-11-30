@@ -10,28 +10,29 @@
     margin-bottom: 12px;
 }
 
+body {
+    position: absolute;
+    z-index: 1;
+}
 
 #alert_items {
-    display: none;
-    float: right;
-    padding: 1rem 2rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: absolute;
+    z-index: 2;
     right: 0;
-    /*z-index: -1;*/
-    opacity: 1;
-    background-color: red;
-    transition: opacity 0.6s;
 }
 
 #alert_info {
     display: none;
+}
 
+.alert_info_box {
+    /*display: none;*/
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #43455C, #6c757d);
 }
 
 #alert_info span, #alert_info p {
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 .close_button {
