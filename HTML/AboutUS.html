@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: pink;
+            color: black;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="top_nav">
+    <div class="container">
+        <header>
+            <img src="../logo/logo.png" alt="company logo" class="logo">
+        </header>
+
+        <div class="navigation">
+            <div class="upper_nav">
+                <button class="drop_button">Lang:EN</button>
+                <div class="select_lang">
+                    <a href="#">English</a>
+                    <a href="../HTML_FR/AboutUs_FR.html">French</a>
+                </div>
+            </div>
+
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="Contactus.html">Contact Us</a></li>
+                    <li><a href="Order.html">Order</a></li>
+                    <li><a href="helpus.html">Help</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="about-section">
+    <h1>About Us Page</h1>
+    <p>More Flavor For Less.</p>
+    <p>We are tied in with presenting crisp food , regardless of whether it implies going additional mile. When you stroll through our entryways, we do what we can to make everybody comfortable in light of the fact that our family stretches out through your location.We ought to be a 'piece of our clients' live and the networks in which we serve  We are tied in with presenting crisp food , regardless of wheteher it implies going additional mile. When you stroll through our entryways, we do what we can to make everybody comfortable in light of the fact that our family stretches out through your location.We ought to be a 'piece of our clients' live and the networks in which we serve.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+    <div id="ceo" class="column">
+        <div class="card"><h3> ROHIT</h3>
+            CEO & Founder
+
+            Rohit  is the founder of the restaurent based on the family's cooking skills,</div>
+    </div>
+    <div id="manager" class="column">
+        <div class="card"><h3>VANSHIKA</h3>
+            Restaurent Manager
+
+            The restaurent is managed by Vanshika, all the quires and complaints are handled by him.</div>
+    </div>
+    <div id="supervisor_" class="column">
+        <div class="card"><h3>JASMEEN</h3>
+            Stock  manager
+
+            The whole food as well as supply of ingredients including accounts are under Jasmeen's observation
+            .</div>
+    </div>
+    <div id="supervisor" class="column">
+        <div class="card"><h3>SHUBHAM</h3>
+            Food and Recipe manager
+
+            The whole menu as well as the kitchen department is under Shubham's supervision.</div>
+    </div>
+    <div id="staff_manager" class="column">
+        <div class="card"><h3>Tejinder</h3>
+            Staff Manager
+
+            The selection of employess along with their duty management is done by Tejinder.</div>
+    </div>
+</div>
+
+
+<footer>
+    <p>&copy; </p>
+</footer>
+</body>
+</html>

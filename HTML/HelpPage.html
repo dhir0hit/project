@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: cursive;, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            background-color: skyblue;
+            color: black;
+
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+
+
+
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-section">
+    <h1><b>HELP US PAGE</b></h1>
+    <p>Website Description</p>
+
+</div>
+
+
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <img src="https://auspost.com.au/content/dam/corp/travel-essentials/destination-guides/italy/photo-antipasto-platter-italian-food.jpg" style="width:100%">
+            <div class="container">
+                <h2>MENU</h2>
+                <p class="title"></p>
+                <p>This website contains a menu page which have description of every food item available in the restaurent <a href="Menu.html">Menu</a>.</p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="https://media.istockphoto.com/vectors/order-online-vector-id1038802628?k=6&m=1038802628&s=170667a&w=0&h=n0mqrIqcwgGwOY-Y6Q5ntYsxilJW9KGXRf-ykFQLE9I=" style="width:110%" align="center">
+            <div class="container">
+                <h2>ONLINE ORDER</h2>
+                <p class="title"></p>
+                <p>We can do online order using this website<a href="Order.html">Order</a> .</p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="https://www.trinityeventstaffing.com/wp-content/uploads/2019/04/Kitchen-Staff-in-Dallas-Austin-Houston.jpg"  style="width:179%">
+            <div class="container">
+                <h2>STAFF</h2>
+                <p class="title"></p>
+                <p>The website also describes about the  staff employed in the restaurent through about us page<a href="#">About Us</a>.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="column">
+        <div class="card">
+            <img src="https://nysba.org/app/uploads/2020/01/Contact-Us_Hero-Image-1-scaled.jpg"  style="width:100% ">
+            <div class="container">
+                <h2>CONTACT</h2>
+                <p class="title"></p>
+                <p>The information regarding direct communication through email, calls etc is given in contact us page<a href="Contactus.html">Contact Us</a>.</p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <img src="http://www.activeennis.ie/wp-content/uploads/bfi_thumb/red-Special-Offer-Sign-mi9l8we2ntmjejy6rgxmzogdg9hm2a4vgiv5q16nfk.jpg"  style="width:90%">
+            <div class="container">
+                <h2>SPECIAL OFFERS</h2>
+                <p class="title"></p>
+                <p>Speciall offers description is shown by the website periodically on home page<a href="Index.html">Home</a>.</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
