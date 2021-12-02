@@ -12,6 +12,7 @@ body {
     margin-right: 2em;
     margin-left: 2em;
     align-items: center;
+    /*display: none;*/
 }
 
 .order_item_content {

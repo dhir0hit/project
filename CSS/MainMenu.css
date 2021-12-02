@@ -16,7 +16,7 @@ body {
 }
 
 #alert_items {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     right: 0;
 }
