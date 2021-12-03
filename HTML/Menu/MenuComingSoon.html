@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Coming Soon - Ember Restaurants</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- adding logo to title bar -->
     <link rel="shortcut icon" href="../../logo/Emberlogo.png">
     <!-- adding google fonts online, so it can load in any browser -->
@@ -12,10 +13,24 @@
     <!-- adding custom css to html page -->
     <link rel="stylesheet" type="text/css" href="../../CSS/navigationbar.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
-    <link rel="stylesheet" type="text/css" href="../../CSS/MainMenu.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/footer.css">
+    <style>
+        #Coming_Soon {
+            font-size: 3rem;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+        }
+        main {
+            height: 37rem;
+        }
+        .footer_container {
+            float: bottom;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
+
 <!--Double header-->
 <div class="navigation_bar">
     <nav class="top_nav">
@@ -23,10 +38,10 @@
             <!-- navigation lists -->
             <ul class=" me-auto">
                 <!-- add active class to current page -->
-                <li class="top_nav_list upper_nav_list"><a href="#" aria-current="page">Home</a></li>
-                <li class="top_nav_list upper_nav_list"><a href="#" >Features</a></li>
+                <li class="top_nav_list upper_nav_list active"><a href="../Index.html" aria-current="page">Home</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../Features.html" >Features</a></li>
                 <!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
-                <li class="top_nav_list upper_nav_list active"><a href="#" >Menu</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../MainMenu.html" >Menu</a></li>
                 <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
             </ul>
             <ul class="nav">
@@ -107,10 +122,8 @@
 </div>
 <div class="main_body">
     <!-- Side bar of page -->
-    aside id="sidebar">
-    <button onclick="sideBar_close()">Close &times;</button>
-    <!-- lists of sidebar content -->
     <aside id="sidebar">
+        <button onclick="sideBar_close()">Close &times;</button>
         <ul>
             <!-- lists of sidebar content -->
             <li class="sidebar_list">
@@ -203,22 +216,7 @@
             <!-- main body text -->
             <div class="main_content">
                 <!-- visual content of page -->
-<h2 style="color: cornflowerblue; text-align: center">Chinese</h2>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
-
-<ul id="myUL">
-
-    <li id="Anhui"><a href="#"><img alt="Anhui" src="../../pictures/Chinese/Anhui.png"><span>Anhui(Hui)</span></a></li>
-    <li id="Cantonese"><a href="#"><img alt="Cantonese" src="../../pictures/Chinese/Cantonese.png"><Span>Cantonese</Span></a></li>
-    <li id="Fujian"><a href="#"><img alt="Fujian" src="../../pictures/Chinese/Fujian.png" ><Span>Fujian</Span></a></li>
-    <li id="Hunan"><a href="#"><img alt="Hunan" src="../../pictures/Chinese/Hunan.png" ><Span>Hunan</Span></a></li>
-    <li id="Jiangsu"><a href="#"><img alt="Jiangsu" src="../../pictures/Chinese/Jiangsu.png" ><Span>Jiangsu</Span></a></li>
-    <li id="Shandong"><a href="#"><img alt="Shandong" src="../../pictures/Chinese/Shandong.png" ><Span>Shandong</Span></a></li>
-    <li id="Szechuan"><a href="#"><img alt="Szechuan" src="../../pictures/Chinese/Szechuan.png" ><Span>Szechuan</Span></a></li>
-    <li id="Zhejiang"><a href="#"><img alt="Zhejiang" src="../../pictures/Chinese/Zhejiang.png" ><Span>Zhejiang</Span></a></li>
-
-</ul>
+                <p id="Coming_Soon">Coming soon</p>
             </div>
         </main>
 
@@ -236,7 +234,7 @@
                     <li><a href="#"><img src="../../logo/facebook-logo-black-transparent.png" width="24" height="24" alt="Ember's facebook account"></a></li>
                     <li><a href="#"><img src="../../logo/Instagram-symbil.jpg" width="24" height="24" alt="Ember's Instagram account"></a></li>
                     <li><a href="#"><img src="../../logo/Twitter-symbol.jpg" width="24" height="24" alt="Ember's Twitter account"></a></li>
-                    <li id="get_on_top"><a href="#"><img src="../../logo/Twitter-symbol.jpg" alt="Ember's Twitter account"></a></li>
+                    <li id="get_on_top"><a href="#"><img src="../../logo/TopSign.png" alt="Ember's Twitter account"></a></li>
                 </ul>
             </footer>
         </div>
@@ -245,6 +243,5 @@
 
 <script type="text/javascript" src="../../JavaScript/SideBar.js"></script>
 <script type="text/javascript" src="../../JavaScript/Search%20Filter.js"></script>
-<script type="text/javascript" src="../../JavaScript/menuSearchFilter.js"></script>
 </body>
 </html>

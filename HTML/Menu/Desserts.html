@@ -3,30 +3,276 @@
 <head>
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- adding logo to title bar -->
+    <link rel="shortcut icon" href="../../logo/Emberlogo.png">
+    <!-- adding google fonts online, so it can load in any browser -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <!-- adding custom css to html page -->
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationbar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/MainMenu.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/footer.css">
+</head>
 <body>
+<!--Double header-->
+<div class="navigation_bar">
+    <nav class="top_nav">
+        <div class="container flex-wrap">
+            <!-- navigation lists -->
+            <ul class=" me-auto">
+                <!-- add active class to current page -->
+                <li class="top_nav_list upper_nav_list active"><a href="../Index.html" aria-current="page">Home</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../Features.html" >Features</a></li>
+                <!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
+                <li class="top_nav_list upper_nav_list"><a href="../MainMenu.html" >Menu</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+            </ul>
+            <ul class="nav">
+                <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
+                <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="top_nav_header" >
+        <div class="container justify-content-center">
+            <a href="#" class="link_a">
+                <img src="../../logo/EmberMainLogo2.png" alt="logo">
+            </a>
+            <form id="Drop_down">
+                <!-- search bar for user help -->
+                <div id="SearchBar">
+                    <input type="text" id="search_bar" class="form-control" placeholder="Search..." aria-label="Search" onkeyup="filterFunction()">
+                </div>
+                <!-- adding links to searchbar dropdown -->
+                <div class="dropdown-content">
+                    <a class="dropdown-link" href="Chinese.html">Chinese</a>
+                    <a class="dropdown-link" href="Coffee.html">Coffee</a>
+                    <a class="dropdown-link" href="Coffee.html">Desserts</a>
+                    <a class="dropdown-link" href="Italian.html">Italian</a>
+                    <a class="dropdown-link" href="../AboutUS.html">About US</a>
+                    <a class="dropdown-link" href="../Features.html">Features</a>
+                    <a class="dropdown-link" href="../HelpPage.html">Help Page</a>
+                    <a class="dropdown-link" href="../Index.html">Index</a>
+                    <a class="dropdown-link" href="../MainMenu.html">Menu</a>
+                    <a class="dropdown-link" href="../Order.html">Order</a>
+                    <!-- Chinese page ids -->
 
-<h2 style="color: cornflowerblue; text-align: center">Desserts</h2>
+                    <a class="dropdown-link" href="Chinese.html#Anhui">Anhui</a>
+                    <a class="dropdown-link" href="Chinese.html#Cantonese">Cantonese</a>
+                    <a class="dropdown-link" href="Chinese.html#Fujian">Fujian</a>
+                    <a class="dropdown-link" href="Chinese.html#Hunan">Hunan</a>
+                    <a class="dropdown-link" href="Chinese.html#Jiangsu">Jiangsu</a>
+                    <a class="dropdown-link" href="Chinese.html#Shandong">Shandong</a>
+                    <a class="dropdown-link" href="Chinese.html#Szechuan">Szechuan</a>
+                    <a class="dropdown-link" href="Chinese.html#Zhejiang">Zhejiang</a>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
-a
-<ul id="myUL">
+                    <!-- Coffee page ids -->
 
-    <li id="AlmondMalaiKulfi"><a href="#"><img alt="AlmondMalaiKulfi" src="../../pictures/Desserts/AlmondMalaiKulfi.jpg"><span>Almond Malai Kulfi</span></a></li>
-    <li id="ApplePie"><a href="#"><img alt="ApplePie" src="../../pictures/Desserts/ApplePie.jpg"><span>Apple Pie</span></a></li>
-    <li id="ChocolateCoffeeTruffle"><a href="#"><img alt="ChocolateCoffeeTruffle" src="../../pictures/Desserts/ChocolateCoffeeTruffle.jpg"><span>Chocolate Coffee Truffle</span></a></li>
-    <li id="CoconutKheer"><a href="#"><img alt="CoconutKheer" src="../../pictures/Desserts/CoconutKheer.jpg"><span>Coconut Kheer</span></a></li>
-    <li id="FudgyChewyBrownies"><a href="#"><img alt="FudgyChewyBrownies" src="../../pictures/Desserts/FudgyChewyBrownies.jpg"><span>Fudgy Chewy Brownies</span></a></li>
-    <li id="LemonTart"><a href="#"><img alt="LemonTart" src="../../pictures/Desserts/LemonTart.jpg"><span>Lemon Tart</span></a></li>
-    <li id="LowFatTiramisu"><a href="#"><img alt="LowFatTiramisu" src="../../pictures/Desserts/LowFatTiramisu.jpg"><span>Low Fat Tiramisu</span></a></li>
-    <li id="PistachioPhirni"><a href="#"><img alt="PistachioPhirni" src="../../pictures/Desserts/PistachioPhirni.jpg"><span>Pistachio Phirni</span></a></li>
+                    <a class="dropdown-link" href="Coffee.html#Affogato">Affogato</a>
+                    <a class="dropdown-link" href="Coffee.html#Americano">Americano</a>
+                    <a class="dropdown-link" href="Coffee.html#Caffe_Latte">Caffe Latte</a>
+                    <a class="dropdown-link" href="Coffee.html#Caffe_Mocha">Caffe Mocha</a>
+                    <a class="dropdown-link" href="Coffee.html#Caffe_Au_Lait">Caffe Au Lait</a>
+                    <a class="dropdown-link" href="Coffee.html#Cappuccino">Cappuccino</a>
+                    <a class="dropdown-link" href="Coffee.html#Cold_Brew_Coffee">Cold Brew Coffee</a>
+                    <a class="dropdown-link" href="Coffee.html#Double_espresso">Double espresso</a>
 
+                    <!-- Coffee page ids -->
 
-</ul>
+                    <a class="dropdown-link" href="Desserts.html#AlmondMalaiKulfi">Almond Malai Kulfi</a>
+                    <a class="dropdown-link" href="Desserts.html#ApplePie">Apple Pie</a>
+                    <a class="dropdown-link" href="Desserts.html#ChocolateCoffeeTruffle">Chocolate Coffee Truffle</a>
+                    <a class="dropdown-link" href="Desserts.html#CoconutKheer">Coconut Kheer</a>
+                    <a class="dropdown-link" href="Desserts.html#FudgyChewyBrownies">Fudgy Chewy Brownies</a>
+                    <a class="dropdown-link" href="Desserts.html#LemonTart">Lemon Tart</a>
+                    <a class="dropdown-link" href="Desserts.html#LowFatTiramisu">Low Fat Tiramisu</a>
+                    <a class="dropdown-link" href="Desserts.html#PistachioPhirni">Pistachio Phirni</a>
 
-</script>
+                    <!-- Coffee page ids -->
+
+                    <a class="dropdown-link" href="Italian.html#Arancini">Arancini</a>
+                    <a class="dropdown-link" href="Italian.html#Lasanga">Lasanga</a>
+                    <a class="dropdown-link" href="Italian.html#Osso">Osso</a>
+                    <a class="dropdown-link" href="Italian.html#Polenta">Polenta</a>
+                    <a class="dropdown-link" href="Italian.html#Ravioli">Ravioli</a>
+                    <a class="dropdown-link" href="Italian.html#Ribollita">Ribollita</a>
+                    <a class="dropdown-link" href="Italian.html#Risotto">Risotto</a>
+                    <a class="dropdown-link" href="Italian.html#Spagetti">Spagetti</a>
+                </div>
+            </form>
+        </div>
+    </header>
+</div>
+<div class="main_body">
+    <!-- Side bar of page -->
+    <aside id="sidebar">
+        <button onclick="sideBar_close()">Close &times;</button>
+        <ul>
+            <!-- lists of sidebar content -->
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="Italian.html">
+                    <img src="https://cdn3.iconfinder.com/data/icons/restaurant-34/24/baking_pizza_food_italian_restaurant-512.png" alt="Italian food logo">
+                    <span>Italian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="Chinese.html">
+                    <img src="../../pictures/SidebarLogo/Chienese.png" alt="Chinese food logo">
+                    <span>Chinese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Thai.png" alt="Thai food logo">
+                    <span>Thai</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Indian.png" alt="Indian food Logo">
+                    <span>Indian</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/French.png" alt="French food logo">
+                    <span>French</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Korean.png" alt="Korean food logo">
+                    <span>Korean</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Japanese.png" alt="Japanese food logo">
+                    <span>Japanese</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/German.png" alt="German food logo">
+                    <span>German</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Spanish.jpg" alt="Spanish food logo">
+                    <span>Spanish</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Fast_food.jpg" alt="Fast food logo">
+                    <span>Fast Food</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="Desserts.html">
+                    <img src="" alt="Dessert logo">
+                    <span>Desserts</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="Coffee.html">
+                    <img src="../../pictures/SidebarLogo/Coffee.png" alt="coffee logo">
+                    <span>Coffee</span>
+                </a>
+            </li>
+            <li class="sidebar_list">
+                <a class="sidebar_link" href="MenuComingSoon.html">
+                    <img src="../../pictures/SidebarLogo/Beverages.jpg" alt="Beverages logo">
+                    <span>Beverages</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="Main_Body">
+        <!-- main content of page -->
+        <main class="content">
+            <div class="sidebar_openButton">
+                <!-- button to open sidebar -->
+                <button onclick="sideBar_open()">&#9776;</button>
+            </div>
+            <!-- main body text -->
+            <div class="main_content">
+                <!-- visual content of page -->
+                <h2 style="color: cornflowerblue; text-align: center">Desserts</h2>
+
+                <div id="alert_items">
+                    <div class="alert_info_box" id="alert_info">
+                        <p><strong id="alert_text">new item</strong> added to item list</p>
+                        <span class="close_button">&times;</span>
+                    </div>
+                </div>
+
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
+                <ul id="myUL">
+
+                    <li id="AlmondMalaiKulfi">
+                        <a href="#"><img alt="AlmondMalaiKulfi" src="../../pictures/Desserts/AlmondMalaiKulfi.jpg"><span>Almond Malai Kulfi</span></a>
+                        <button onclick="alertItemOrder('AlmondMalaiKulfi'); sendingItems('AlmondMalaiKulfi')">Add To Order List</button>
+                    </li>
+                    <li id="ApplePie">
+                        <a href="#"><img alt="ApplePie" src="../../pictures/Desserts/ApplePie.jpg"><span>Apple Pie</span></a>
+                        <button onclick="alertItemOrder('ApplePie'); sendingItems('ApplePie')">Add To Order List</button>
+                    </li>
+                    <li id="ChocolateCoffeeTruffle">
+                        <a href="#"><img alt="ChocolateCoffeeTruffle" src="../../pictures/Desserts/ChocolateCoffeeTruffle.jpg"><span>Chocolate Coffee Truffle</span></a>
+                        <button onclick="alertItemOrder('ChocolateCoffeeTruffle'); sendingItems('ChocolateCoffeeTruffle')">Add To Order List</button>
+                    </li>
+                    <li id="CoconutKheer">
+                        <a href="#"><img alt="CoconutKheer" src="../../pictures/Desserts/CoconutKheer.jpg"><span>Coconut Kheer</span></a>
+                        <button onclick="alertItemOrder('CoconutKheer'); sendingItems('CoconutKheer')">Add To Order List</button>
+                    </li>
+                    <li id="FudgyChewyBrownies">
+                        <a href="#"><img alt="FudgyChewyBrownies" src="../../pictures/Desserts/FudgyChewyBrownies.jpg"><span>Fudgy Chewy Brownies</span></a>
+                        <button onclick="alertItemOrder('FudgyChewyBrownies'); sendingItems('FudgyChewyBrownies')">Add To Order List</button>
+                    </li>
+                    <li id="LemonTart">
+                        <a href="#"><img alt="LemonTart" src="../../pictures/Desserts/LemonTart.jpg"><span>Lemon Tart</span></a>
+                        <button onclick="alertItemOrder('LemonTart'); sendingItems('LemonTart')">Add To Order List</button>
+                    </li>
+                    <li id="LowFatTiramisu">
+                        <a href="#"><img alt="LowFatTiramisu" src="../../pictures/Desserts/LowFatTiramisu.jpg"><span>Low Fat Tiramisu</span></a>
+                        <button onclick="alertItemOrder('LowFatTiramisu'); sendingItems('LowFatTiramisu')">Add To Order List</button>
+                    </li>
+                    <li id="PistachioPhirni">
+                        <a href="#"><img alt="PistachioPhirni" src="../../pictures/Desserts/PistachioPhirni.jpg"><span>Pistachio Phirni</span></a>
+                        <button onclick="alertItemOrder('PistachioPhirni'); sendingItems('PistachioPhirni')">Add To Order List</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <!--footer of page-->
+        <div class="footer_container">
+            <footer>
+                <div class="footer_content">
+                    <a href="#" >
+                        <img src="../../logo/Emberlogo.png" width="30" height="24" alt="Ember logo">
+                    </a>
+                    <span class="text-muted">&copy; 2021 Ember Restaurants, Inc</span>
+                </div>
+
+                <ul class="social_media">
+                    <li><a href="#"><img src="../../logo/facebook-logo-black-transparent.png" width="24" height="24" alt="Ember's facebook account"></a></li>
+                    <li><a href="#"><img src="../../logo/Instagram-symbil.jpg" width="24" height="24" alt="Ember's Instagram account"></a></li>
+                    <li><a href="#"><img src="../../logo/Twitter-symbol.jpg" width="24" height="24" alt="Ember's Twitter account"></a></li>
+                    <li id="get_on_top"><a href="#"><img src="../../logo/TopSign.png" alt="Ember's Twitter account"></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+</div>
 <script type="text/javascript" src="../../JavaScript/SideBar.js"></script>
 <script type="text/javascript" src="../../JavaScript/Search%20Filter.js"></script>
+<script type="text/javascript" src="../../JavaScript/OrderItem.js"></script>
 <script type="text/javascript" src="../../JavaScript/menuSearchFilter.js"></script>
 </body>
 </html>
