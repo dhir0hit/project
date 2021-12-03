@@ -29,10 +29,11 @@ body {
     /*display: none;*/
     padding: 1rem 2rem;
     background: linear-gradient(to right, #43455C, #6c757d);
+
 }
 
-#alert_info span, #alert_info p {
-    /*display: inline-block;*/
+.alert_info_box p, .alert_info_box strong {
+    color: #c9c9c9;
 }
 
 .close_button {

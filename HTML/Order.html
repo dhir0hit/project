@@ -13,6 +13,7 @@
     <!-- adding custom css to html page -->
     <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/Order.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/SignUpLogIn.css">
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
 </head>
 <body>
@@ -30,11 +31,12 @@
                 <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
             </ul>
             <ul class="nav">
-                <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
-                <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+                <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Login</a></li>
+                <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Sign up</a></li>
             </ul>
         </div>
     </nav>
+
     <header class="top_nav_header" >
         <div class="container justify-content-center">
             <a href="#" class="link_a">
@@ -105,6 +107,39 @@
         </div>
     </header>
 </div>
+
+<div id="Sign_Log">
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="../logo/Avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label>
+                <b>Username</b>
+                <input type="text" placeholder="Enter Username" onkeyup="ShowError('User_Name')" onkeydown="ShowError('User_Name')" id="User_Name" name="User_Name" >
+                <span id="User_Name_Error">*</span>
+            </label>
+
+            <label>
+                <b>Password</b>
+                <input type="password" placeholder="Enter Password" onkeydown="ShowError('User_Password')" id="User_Password" name="User_Password" >
+                <span id="User_Password_Error">*</span>
+            </label>
+                <button id="login_button" type="button" onclick="showErrorButton()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="closeLogin()" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
 <div class="main_body">
     <div class="Main_Body">
         <main class="content">
@@ -129,9 +164,6 @@
 
                 <!-- Risotto Alla Milanese -->
                 <div id="Risotto_Alla_Milanese" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Risotto_Alla_Milanese.jpg" alt="Risotto Alla Milanese">
                         <div class="order_item_text">
@@ -139,7 +171,7 @@
                             <h4>menu to order</h4> <!-- write here -->
 
                             <label>
-                                number of items: <input type="number" id="Risotto_items" min="0" max="10" maxlength="2" value="0">
+                                number of items: <input type="number" id="Risotto_Alla_Milanese_items" min="0" max="10" maxlength="2" value="0">
                             </label>
 
                             <div class="order_item_price">
@@ -152,9 +184,6 @@
 
                 <!-- Polenta -->
                 <div id="Polenta" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Polenta.jpg" alt="Delicious Polenta">
                         <div class="order_item_text">
@@ -174,22 +203,19 @@
                 </div>
 
                 <!-- Lasagna -->
-                <div id="Lasagna" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
+                <div id="Lasanga" class="order_item">
                     <div class="order_item_content">
-                        <img src="../pictures/Italian/Lasanga.jpg" alt="Delicious Lasagna">
+                        <img src="../pictures/Italian/Lasanga.jpg" alt="Delicious Lasanga">
                         <div class="order_item_text">
                             <h2>Lasagna</h2>
                             <h4>menu to order</h4> <!-- write here -->
 
                             <label>
-                                number of items: <input type="number" id="Lasagna_items" min="0" max="10" maxlength="2" value="0">
+                                number of items: <input type="number" id="Lasanga_items" min="0" max="10" maxlength="2" value="0">
                             </label>
 
                             <div class="order_item_price">
-                                <h5 class="item_price">Item Subtotal:  $<span id="Lasagna_subtotal">30.95</span></h5>
+                                <h5 class="item_price">Item Subtotal:  $<span id="Lasanga_subtotal">30.95</span></h5>
                             </div>
                         </div>
                     </div>
@@ -198,9 +224,6 @@
 
                 <!-- Ravioli -->
                 <div id="Ravioli" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Ravioli.jpg" alt="Delicious Ravioli">
                         <div class="order_item_text">
@@ -221,9 +244,6 @@
 
                 <!-- Osso_Buco -->
                 <div id="Osso_Buco" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Osso_Buco.jpg" alt="Delicious Osso buco">
                         <div class="order_item_text">
@@ -244,9 +264,6 @@
 
                 <!-- Arancini -->
                 <div id="Arancini" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Arancini.jpg" alt="Delicious Arancini">
                         <div class="order_item_text">
@@ -267,9 +284,6 @@
 
                 <!-- Ribollita -->
                 <div id="Ribollita" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Ribollita.jpg" alt="Delicious Ribollita">
                         <div class="order_item_text">
@@ -290,9 +304,6 @@
 
                 <!-- Spaghetti_Alla_Carbonara -->
                 <div id="Spaghetti_Alla_Carbonara" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Italian/Spaghetti_Alla_Carbonara.jpg" alt="Delicious Spaghetti Alla Carbonara">
                         <div class="order_item_text">
@@ -313,9 +324,6 @@
 
                 <!-- Anhui(Hui) -->
                 <div id="Anhui" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Anhui.png" alt="Delicious Anhui">
                         <div class="order_item_text">
@@ -336,9 +344,6 @@
 
                 <!-- Cantonese (Yu) -->
                 <div id="Cantonese" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Cantonese.png" alt="Delicious Cantonese">
                         <div class="order_item_text">
@@ -359,9 +364,6 @@
 
                 <!-- Fujian (Min) -->
                 <div id="Fujian" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Fujian.png" alt="Delicious Fujian">
                         <div class="order_item_text">
@@ -382,9 +384,6 @@
 
                 <!-- Hunan (Xiang) -->
                 <div id="Hunan" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Hunan.png" alt="Delicious Hunan">
                         <div class="order_item_text">
@@ -405,9 +404,6 @@
 
                 <!-- Jiangsu (Su) -->
                 <div id="Jiangsu" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Jiangsu.png" alt="Delicious Jiangsu">
                         <div class="order_item_text">
@@ -428,9 +424,6 @@
 
                 <!-- Shandong (Lu) -->
                 <div id="Shandong" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Shandong.png" alt="Delicious Shandong">
                         <div class="order_item_text">
@@ -451,9 +444,6 @@
 
                 <!-- Szechuan (Lu) -->
                 <div id="Szechuan" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Szechuan.png" alt="Delicious Szechuan">
                         <div class="order_item_text">
@@ -474,9 +464,6 @@
 
                 <!-- Zhejiang (Zhe) -->
                 <div id="Zhejiang" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Chinese/Zhejiang.png" alt="Delicious Zhejiang">
                         <div class="order_item_text">
@@ -497,9 +484,6 @@
 
                 <!-- Affogato -->
                 <div id="Affogato" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/Affogato.jpg" alt="Sweet Affogato">
                         <div class="order_item_text">
@@ -520,9 +504,6 @@
 
                 <!-- Americano -->
                 <div id="Americano" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/Americano.jpg" alt="Sweet Americano">
                         <div class="order_item_text">
@@ -543,9 +524,6 @@
 
                 <!-- Caffé latte -->
                 <div id="Caffe_Latte" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/CaffeLatte.jpg" alt="Sweet Caffé Latte">
                         <div class="order_item_text">
@@ -566,9 +544,6 @@
 
                 <!-- Caffé Mocha -->
                 <div id="Caffe_Mocha" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/CaffeMocha.jpg" alt="Sweet Caffé Mocha">
                         <div class="order_item_text">
@@ -589,9 +564,6 @@
 
                 <!-- Caffé Au Lait -->
                 <div id="Caffe_Au_Lait" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/CafeAuLait.jpg" alt="Sweet Caffé Au Lait">
                         <div class="order_item_text">
@@ -612,9 +584,6 @@
 
                 <!-- Cappuccino -->
                 <div id="Cappuccino" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/Cappuccino.jpg" alt="Sweet Cappuccino">
                         <div class="order_item_text">
@@ -635,9 +604,6 @@
 
                 <!-- Cold Brew Coffee -->
                 <div id="Cold_Brew_Coffee" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/ColdBrewCoffe.jpg" alt="Sweet Cold Brew Coffee">
                         <div class="order_item_text">
@@ -658,9 +624,6 @@
 
                 <!-- Double_espresso -->
                 <div id="Double_espresso" class="order_item">
-                    <label>
-                        <input type="checkbox">
-                    </label>
                     <div class="order_item_content">
                         <img src="../pictures/Coffee/DoubleEspresso.jpg" alt="Sweet Double espresso">
                         <div class="order_item_text">
@@ -679,7 +642,170 @@
                     <hr>
                 </div>
 
+                <!-- AlmondMalaiKulfi -->
+                <div id="AlmondMalaiKulfi" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/AlmondMalaiKulfi.jpg" alt="Almond Malai Kulfi">
+                        <div class="order_item_text">
+                            <h2>Almond Malai Kulfi</h2>
+                            <h4>menu to order</h4> <!-- write here -->
 
+                            <label>
+                                number of items: <input type="number" id="AlmondMalaiKulfi_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="AlmondMalaiKulfi_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- ApplePie -->
+                <div id="ApplePie" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/ApplePie.jpg" alt="Apple Pie">
+                        <div class="order_item_text">
+                            <h2>Apple Pie</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="ApplePie_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="ApplePie_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- ChocolateCoffeeTruffle -->
+                <div id="ChocolateCoffeeTruffle" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/ChocolateCoffeeTruffle.jpg" alt="Chocolate Coffee Truffle">
+                        <div class="order_item_text">
+                            <h2>Chocolate Coffee Truffle</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="ChocolateCoffeeTruffle_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="ChocolateCoffeeTruffle_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- CoconutKheer -->
+                <div id="CoconutKheer" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/CoconutKheer.jpg" alt="Coconut Kheer">
+                        <div class="order_item_text">
+                            <h2>Coconut Kheer</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="CoconutKheer_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="CoconutKheer_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- FudgyChewyBrownies -->
+                <div id="FudgyChewyBrownies" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/FudgyChewyBrownies.jpg" alt="Fudgy Chewy Brownies">
+                        <div class="order_item_text">
+                            <h2>Fudgy Chewy Brownies</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="FudgyChewyBrownies_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="FudgyChewyBrownies_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- LemonTart -->
+                <div id="LemonTart" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/LemonTart.jpg" alt="Lemon Tart">
+                        <div class="order_item_text">
+                            <h2>Lemon Tart</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="LemonTart_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="LemonTart_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <!-- LowFatTiramisu -->
+                <div id="LowFatTiramisu" class="order_item">
+                    <div class="order_item_content">
+                        <img src="../pictures/Desserts/LowFatTiramisu.jpg" alt="Low Fat Tiramisu">
+                        <div class="order_item_text">
+                            <h2>Low Fat Tiramisu</h2>
+                            <h4>menu to order</h4> <!-- write here -->
+
+                            <label>
+                                number of items: <input type="number" id="LowFatTiramisu_items" min="0" max="10" maxlength="2" value="0">
+                            </label>
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="LowFatTiramisu_subtotal">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div id="GrandTotal" class="order_item">
+                    <div class="order_item_content">
+<!--                        <img src="../pictures/Desserts/LowFatTiramisu.jpg" alt="Low Fat Tiramisu">-->
+                        <div class="order_item_text">
+                            <h2>Grand Total</h2>
+                        <!--<h4>menu to order</h4> &lt;!&ndash; write here &ndash;&gt;-->
+
+                            <div class="order_item_price">
+                                <h5 class="item_price">Item Subtotal:  $<span id="Items_Subtotal">30.95</span></h5>
+                            </div>
+                            <div class="order_item_price">
+                                <h5 class="item_price">GST:  $<span id="GST">30.95</span></h5>
+                            </div>
+                            <div class="order_item_price">
+                                <h5 class="item_price">HST:  $<span id="HST">30.95</span></h5>
+                            </div>
+                            <div class="order_item_price">
+                                <hr>
+                                <h5 class="item_price">Grand Total:  $<span id="Grand_Total">30.95</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
             </form>
         </main>
 
@@ -703,6 +829,7 @@
         </div>
     </div>
     <script type="text/javascript" src="../JavaScript/orderFormFilter.js"></script>
+    <script type="text/javascript" src="../JavaScript/LogInSignIn.js"></script>
 </div>
 </body>
 </html>

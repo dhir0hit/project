@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Orbitron:wght@400;500;600;700;800;900&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../CSS/Index.css">
     <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
-    <script src="../JavaScript/Search%20Filter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/SignUpLogIn.css">
 </head>
 <body>
 <nav class="top_nav">
@@ -101,6 +101,38 @@
     </div>
 </header>
 
+<div id="Sign_Log">
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="../logo/Avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label>
+                <b>Username</b>
+                <input type="text" placeholder="Enter Username" onkeyup="ShowError('User_Name')" onkeydown="ShowError('User_Name')" id="User_Name" name="User_Name" >
+                <span id="User_Name_Error">*</span>
+            </label>
+
+            <label>
+                <b>Password</b>
+                <input type="password" placeholder="Enter Password" onkeydown="ShowError('User_Password')" id="User_Password" name="User_Password" >
+                <span id="User_Password_Error">*</span>
+            </label>
+            <button id="login_button" type="button" onclick="showErrorButton()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="closeLogin()" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
     <main class="content">
         <img src="../logo/Emberlogo.png" alt="Ember restaurants logo">
         <h3>Good ideas start with a good food </h3>
@@ -114,5 +146,18 @@
         <a id="orderbutton" href="MainMenu.html">See the Menu</a>
         </div>
     </main>
+
+<script>
+    localStorage.clear();
+
+    window.onload = function () {
+        Items = [ "Lasanga", "Ravioli", "Anhui", "Cantonese", "Hunan", "Jiangsu", "Shandong", "Affogato", "Americano", "Caffe_Latte", "Caffe_Mocha", "Caffe_Au_Lait", "Cappuccino", "Cold_Brew_Coffee", "Double_espresso", "AlmondMalaiKulfi", "ApplePie", "ChocolateCoffeeTruffle", "CoconutKheer", "FudgyChewyBrownies", "LemonTart", "LowFatTiramisu", "Risotto_Alla_Milanese", "Polenta", "Osso_Buco", "Arancini", "Ribollita", "Spaghetti_Alla_Carbonara"]
+        for (var i=0; i < Items.length; i++) {
+            localStorage.setItem(Items[i], '0');
+        }
+    }
+</script>
+<script src="../JavaScript/Search%20Filter.js"></script>
+<script type="text/javascript" src="../JavaScript/LogInSignIn.js"></script>
 </body>
 </html>

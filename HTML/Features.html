@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/Features.css">
     <link rel="stylesheet" type="text/css" href="../CSS/navigationbar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
-    <script src="../JavaScript/Search%20Filter.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/SignUpLogIn.css">
 </head>
 <body>
 <!--Double header-->
@@ -31,8 +31,8 @@
             <li class="top_nav_list upper_nav_list"><a href="AboutUS.html" >About</a></li>
         </ul>
         <ul class="nav">
-            <li class="top_nav_list lower_nav_list"><a href="#" >Login</a></li>
-            <li class="top_nav_list lower_nav_list"><a href="#" >Sign up</a></li>
+            <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Login</a></li>
+            <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Sign up</a></li>
         </ul>
     </div>
 </nav>
@@ -107,6 +107,39 @@
     </div>
 </header>
 </div>
+
+<div id="Sign_Log">
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="../logo/Avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label>
+                <b>Username</b>
+                <input type="text" placeholder="Enter Username" onkeyup="ShowError('User_Name')" onkeydown="ShowError('User_Name')" id="User_Name" name="User_Name" >
+                <span id="User_Name_Error">*</span>
+            </label>
+
+            <label>
+                <b>Password</b>
+                <input type="password" placeholder="Enter Password" onkeydown="ShowError('User_Password')" id="User_Password" name="User_Password" >
+                <span id="User_Password_Error">*</span>
+            </label>
+            <button id="login_button" type="button" onclick="showErrorButton()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="closeLogin()" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
     <!-- main content of page -->
     <main class="content">
         <img class="carousel" src="../pictures/EmberBackgroundPic.jpg" alt="Ember restaurants logo">
@@ -162,7 +195,7 @@
         </ul>
     </footer>
 </div>
-
-
+<script src="../JavaScript/Search%20Filter.js"></script>
+<script type="text/javascript" src="../JavaScript/LogInSignIn.js"></script>
 </body>
 </html>

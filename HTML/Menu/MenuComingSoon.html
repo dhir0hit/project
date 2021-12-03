@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../../CSS/navigationbar.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/SignUpLogIn.css">
     <style>
         #Coming_Soon {
             font-size: 3rem;
@@ -120,6 +121,39 @@
         </div>
     </header>
 </div>
+
+<div id="Sign_Log">
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="../../logo/Avatar.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label>
+                <b>Username</b>
+                <input type="text" placeholder="Enter Username" onkeyup="ShowError('User_Name')" onkeydown="ShowError('User_Name')" id="User_Name" name="User_Name" >
+                <span id="User_Name_Error">*</span>
+            </label>
+
+            <label>
+                <b>Password</b>
+                <input type="password" placeholder="Enter Password" onkeydown="ShowError('User_Password')" id="User_Password" name="User_Password" >
+                <span id="User_Password_Error">*</span>
+            </label>
+            <button id="login_button" type="button" onclick="showErrorButton()">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="closeLogin()" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
 <div class="main_body">
     <!-- Side bar of page -->
     <aside id="sidebar">
@@ -243,5 +277,6 @@
 
 <script type="text/javascript" src="../../JavaScript/SideBar.js"></script>
 <script type="text/javascript" src="../../JavaScript/Search%20Filter.js"></script>
+<script type="text/javascript" src="../../JavaScript/LogInSignIn.js"></script>
 </body>
 </html>

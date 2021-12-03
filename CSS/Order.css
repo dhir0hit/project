@@ -12,9 +12,12 @@ body {
     margin-right: 2em;
     margin-left: 2em;
     align-items: center;
-    /*display: none;*/
+    display: none;
 }
 
+#GrandTotal {
+    display: block;
+}
 .order_item_content {
     /*text-align: center;*/
     margin-left: 2em;
@@ -35,10 +38,6 @@ body {
     margin-left: 2rem;
     width: 26rem;
     align-items: center;
-}
-
-.order_item {
-    /*display: none;*/
 }
 
 .order_item_text label input {
@@ -79,5 +78,11 @@ main.content, body {
     .content {
         width: 80vw;
         margin-left: 14vw;
+    }
+}
+
+@media (min-width: 680px) {
+    #GrandTotal .order_item_content .order_item_price {
+        padding-left: 12.5rem;
     }
 }
