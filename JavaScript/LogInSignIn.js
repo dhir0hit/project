@@ -48,7 +48,7 @@ function ShowError(idname) {
     if (UserInfo == "") {
         is_valid = false;
 
-        if (idname === "User_Name") {
+        if (idname === "User_Name" || idname === "first_name" || idname === "last_name") {
             UserInfoError.innerHTML = "User Name can not be empty";
         } else if (idname === "User_Password") {
             UserInfoError.innerHTML = "User Password can not be empty";
@@ -56,7 +56,8 @@ function ShowError(idname) {
     } else {
         UserInfoError.innerHTML = "*";
         if (idname === "User_Name") {
-            if (isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not be uppercase"}
+            if (containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Special character"}
+            else if (isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not be uppercase"}
             else if (containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Digits"}
         }
         if  (idname === "User_Password") {
@@ -110,4 +111,30 @@ function closeLogin() {
     document.getElementById('Sign_Log').style.display = 'none';
     document.getElementsByClassName("navigation_bar")[0].style.display = "block";
     document.getElementsByClassName('main_body')[0].style.display = "block";
+}
+
+function submitOrder() {
+    var FirstName = $("first_name").value;
+    var LastName = $("last_name").value;
+    var CustStreet = $("cust_street").value;
+    var CustCity = $("cust_city").value;
+    var CustState = $("cust_state").value;
+    var ZipCode = $("zip_code").value;
+    var CountryCA = $("Cust_country_CA").value;
+    var CountryUSA = $("Cust_country_USA").value;
+    var CustPhone = $("cust_phone").value;
+
+    if (FirstName === "") {$("first_name_Error").textContent = "name can not be empty"}
+    if (LastName === "") {$("first_name_Error").textContent = "name can not be empty"}
+    if (CustStreet === "") {$("cust_street_Error").textContent = "Street can not be empty"}
+    if (CustCity === "") {$("cust_city_Error").textContent = "City can not be empty"}
+    if (CustState === "") {$("cust_state_Error").textContent = "State can not be empty"}
+    if (ZipCode === "") {$("zip_code_Error").textContent = "Zip Code can not be empty"}
+    if (CountryCA === "") {$("cust_country_Error").textContent = "Country must be Selected"}
+    if (CountryUSA === "") {$("cust_country_Error").textContent = "Country must be Selected"}
+    if (CustPhone === "") {$("cust_phone_Error").textContent = "Phone can not be empty"}
+
+    if (FirstName !== "" && LastName !== "" && CustStreet !== "" && CustCity === "" && CustState === "" && ZipCode === "" && CustPhone === "") {
+        
+    }
 }

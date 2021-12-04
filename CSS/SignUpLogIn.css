@@ -1,7 +1,7 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+/*body {font-family: Arial, Helvetica, sans-serif;}*/
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+#Sign_Log input[type=text], #Sign_Log input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -16,7 +16,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+#Sign_Log button, #order_submit_button input {
     background-color: #707793;
     color: white;
     padding: 14px 20px;
@@ -26,43 +26,43 @@ button {
     width: 100%;
 }
 
-button:hover {
+#Sign_Log button:hover, #order_submit_button input:hover {
     opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+#Sign_Log .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #3BBA9C;
 }
 
 /* Center the image and position the close button */
-.imgcontainer {
+#Sign_Log .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
 }
 
-img.avatar {
+#Sign_Log img.avatar {
     width: 30%;
     border-radius: 50%;
 }
 
-.container {
+#Sign_Log .container {
     padding: 16px;
     width: 100%;
 }
 
-.container label {
+#Sign_Log .container label {
     display: block;
 }
 
-.container label span {
+#Sign_Log .container label span {
     color: red;
 }
 
-span.psw {
+#Sign_Log span.psw {
     float: right;
     padding-top: 16px;
     right: 0;

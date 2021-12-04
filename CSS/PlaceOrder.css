@@ -1,0 +1,117 @@
+.main_body, .Main_Body, main.content {
+    width: 100%;
+}
+
+main.content{
+    width: 80vw;
+    height: 100%;
+    padding-left: 16rem;
+    padding-top: 2rem;
+}
+main h1 {
+    text-transform: uppercase;
+    font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    /*background: #ffa101;*/
+    margin-bottom: 1em;
+}
+
+.main_body form{
+    line-height: 3;
+    font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+}
+.main_body label{
+    width: 12em;
+    display: inline-block;
+    right: 0;
+}
+.main_body form h4{
+    display: none;
+}
+.main_body form span {
+    color: red;
+}
+
+main form input{
+    padding: 0.5em;
+    width: auto;
+}
+
+.main_body label{
+    text-align: center;
+}
+
+#cust_area_code{
+    width: 2.7em;
+    margin-right: 0.5em;
+}
+
+.country_label{
+    display: inline-block;
+    width: 6em;
+    border-radius: 10px;
+    border: 1px solid #707793;
+    font-weight: bold;
+    text-align: left;
+    background-color: #707793;
+    margin: 5px 0 5px;
+}
+.country_label input{
+    margin-right: 1.5em;
+    text-align: left;
+}
+
+.main_body textarea{
+    width: 25em;
+    height: 10em;
+}
+
+/*Submission button*/
+button.submission_button{
+    color: black;
+    border-radius: 10px;
+    background-color: #707793;
+    padding: 0.7em 1em;
+    font-weight: bold;
+    border: 0;
+}
+button.submission_button:active{
+    color: #707793;
+    background-color: #707793;
+    margin-bottom: 10em;
+}
+
+#display_order_placed {
+    text-align: center;
+    border: #6c757d solid 1px;
+    display: none;
+}
+
+@media screen and (max-width: 920px){
+    main{
+        width: 90%;
+    }
+    .main_body label{
+        text-align: left;
+        width: auto;
+        display: block;
+        vertical-align: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main_body main.content{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 921px){
+    .main_body form input{
+        padding: 0.7em;
+
+    }
+    .main_body label, .main_body input {
+        display: inline-block;
+    }
+}

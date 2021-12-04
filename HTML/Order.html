@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Order - Ember Restraunts</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- adding logo to title bar -->
     <link rel="shortcut icon" href="../logo/Emberlogo.png">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/Order.css">
     <link rel="stylesheet" type="text/css" href="../CSS/SignUpLogIn.css">
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/MainMenu.css">
 </head>
 <body>
 <!--Double header-->
@@ -24,11 +25,12 @@
             <!-- navigation lists -->
             <ul class=" me-auto">
                 <!-- add active class to current page -->
-                <li class="top_nav_list upper_nav_list active"><a href="#" aria-current="page">Home</a></li>
-                <li class="top_nav_list upper_nav_list"><a href="#" >Features</a></li>
-                <!--            <li class="top_nav_list"><a href="#" >Pricing</a></li>-->
-                <li class="top_nav_list upper_nav_list"><a href="#" >Menu</a></li>
-                <li class="top_nav_list upper_nav_list"><a href="#" >About</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="Index.html" >Home</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="Features.html" >Features</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="MainMenu.html" >Menu</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="HelpPage.html" >Help</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="AboutUS.html" >About</a></li>
+                <li class="top_nav_list upper_nav_list active"><a href="Order.html" aria-current="page">Order</a></li>
             </ul>
             <ul class="nav">
                 <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Login</a></li>
@@ -143,6 +145,14 @@
 <div class="main_body">
     <div class="Main_Body">
         <main class="content">
+
+            <div id="alert_items">
+                <div class="alert_info_box" id="alert_info">
+                    <p id="alertText"><strong id="alert_text">Please</strong> select an item from menu first</p>
+                    <span class="close_button">&times;</span>
+                </div>
+            </div>
+
             <h1>Ember Order Form</h1>
             <form>
                 <!-- No order Form  -->
@@ -806,6 +816,16 @@
                     </div>
                     <hr>
                 </div>
+
+                <div id="display_order_placed">
+                    <h1>Order Confirmed</h1>
+                    <p>You'll be getting your order within an hour</p>
+
+                </div>
+
+                <div id="order_submit_button">
+                    <input type="button" value="Order" style="font-size: 1em;" onclick="placeOrder()">
+                </div>
             </form>
         </main>
 
@@ -830,6 +850,7 @@
     </div>
     <script type="text/javascript" src="../JavaScript/orderFormFilter.js"></script>
     <script type="text/javascript" src="../JavaScript/LogInSignIn.js"></script>
+    <script type="text/javascript" src="../JavaScript/menuSearchFilter.js"></script>
 </div>
 </body>
 </html>

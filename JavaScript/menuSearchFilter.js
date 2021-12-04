@@ -23,13 +23,9 @@ function alertItemOrder(text) {
     // alert_info p strong
     new_alert_info.children[0].children[0].textContent = text;
 
-    // alert_info close button
-    // new_alert_info.children[1].style.display = "inline-block";
     new_alert_info.children[1].onclick = function () {
         new_alert_info.style.opacity = "0";
         setTimeout(function () {new_alert_info.style.display = "none"}, 600);
-        // setTimeout(function () {alertItem.style.display = "none"}, 600);
-
     };
 }
 

@@ -26,9 +26,10 @@
                 <!-- add active class to current page -->
                 <li class="top_nav_list upper_nav_list"><a href="../Index.html" >Home</a></li>
                 <li class="top_nav_list upper_nav_list"><a href="../Features.html" >Features</a></li>
-                <li class="top_nav_list upper_nav_list"><a href="../HelpPage.html" >Help</a></li>
                 <li class="top_nav_list upper_nav_list active"><a href="../MainMenu.html" aria-current="page">Menu</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../HelpPage.html" >Help</a></li>
                 <li class="top_nav_list upper_nav_list"><a href="../AboutUS.html" >About</a></li>
+                <li class="top_nav_list upper_nav_list"><a href="../Order.html" >Order</a></li>
             </ul>
             <ul class="nav">
                 <li class="top_nav_list lower_nav_list" onclick="openLogin()"><a href="#" >Login</a></li>
@@ -237,22 +238,51 @@
             <!-- main body text -->
             <div class="main_content">
                 <!-- visual content of page -->
-<h2 style="color: cornflowerblue; text-align: center">Chinese</h2>
+                <h2 style="color: cornflowerblue; text-align: center">Chinese</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
+                <div id="alert_items">
+                    <div class="alert_info_box" id="alert_info">
+                        <p><strong id="alert_text">new item</strong> added to item list</p>
+                        <span class="close_button">&times;</span>
+                    </div>
+                </div>
 
-<ul id="myUL">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Select your order from the following list" title="Order From the items given">
 
-    <li id="Anhui"><a href="#"><img alt="Anhui" src="../../pictures/Chinese/Anhui.png"><span>Anhui(Hui)</span></a></li>
-    <li id="Cantonese"><a href="#"><img alt="Cantonese" src="../../pictures/Chinese/Cantonese.png"><Span>Cantonese</Span></a></li>
-    <li id="Fujian"><a href="#"><img alt="Fujian" src="../../pictures/Chinese/Fujian.png" ><Span>Fujian</Span></a></li>
-    <li id="Hunan"><a href="#"><img alt="Hunan" src="../../pictures/Chinese/Hunan.png" ><Span>Hunan</Span></a></li>
-    <li id="Jiangsu"><a href="#"><img alt="Jiangsu" src="../../pictures/Chinese/Jiangsu.png" ><Span>Jiangsu</Span></a></li>
-    <li id="Shandong"><a href="#"><img alt="Shandong" src="../../pictures/Chinese/Shandong.png" ><Span>Shandong</Span></a></li>
-    <li id="Szechuan"><a href="#"><img alt="Szechuan" src="../../pictures/Chinese/Szechuan.png" ><Span>Szechuan</Span></a></li>
-    <li id="Zhejiang"><a href="#"><img alt="Zhejiang" src="../../pictures/Chinese/Zhejiang.png" ><Span>Zhejiang</Span></a></li>
-
-</ul>
+                <ul id="myUL">
+                    <li id="Anhui">
+                        <a href="#"><img alt="Anhui" src="../../pictures/Chinese/Anhui.png"><span>Anhui(Hui)</span></a>
+                        <button onclick="alertItemOrder('Anhui'); sendingItems('Anhui')">Add To Order List</button>
+                    </li>
+                    <li id="Cantonese">
+                        <a href="#"><img alt="Cantonese" src="../../pictures/Chinese/Cantonese.png"><Span>Cantonese</Span></a>
+                        <button onclick="alertItemOrder('Cantonese'); sendingItems('Cantonese')">Add To Order List</button>
+                    </li>
+                    <li id="Fujian">
+                        <a href="#"><img alt="Fujian" src="../../pictures/Chinese/Fujian.png" ><Span>Fujian</Span></a>
+                        <button onclick="alertItemOrder('Fujian'); sendingItems('Fujian')">Add To Order List</button>
+                    </li>
+                    <li id="Hunan">
+                        <a href="#"><img alt="Hunan" src="../../pictures/Chinese/Hunan.png" ><Span>Hunan</Span></a>
+                        <button onclick="alertItemOrder('Hunan'); sendingItems('Hunan')">Add To Order List</button>
+                    </li>
+                    <li id="Jiangsu">
+                        <a href="#"><img alt="Jiangsu" src="../../pictures/Chinese/Jiangsu.png" ><Span>Jiangsu</Span></a>
+                        <button onclick="alertItemOrder('Jiangsu'); sendingItems('Jiangsu')">Add To Order List</button>
+                    </li>
+                    <li id="Shandong">
+                        <a href="#"><img alt="Shandong" src="../../pictures/Chinese/Shandong.png" ><Span>Shandong</Span></a>
+                        <button onclick="alertItemOrder('Shandong'); sendingItems('Shandong')">Add To Order List</button>
+                    </li>
+                    <li id="Szechuan">
+                        <a href="#"><img alt="Szechuan" src="../../pictures/Chinese/Szechuan.png" ><Span>Szechuan</Span></a>
+                        <button onclick="alertItemOrder('Szechuan'); sendingItems('Szechuan')">Add To Order List</button>
+                    </li>
+                    <li id="Zhejiang">
+                        <a href="#"><img alt="Zhejiang" src="../../pictures/Chinese/Zhejiang.png" ><Span>Zhejiang</Span></a>
+                        <button onclick="alertItemOrder('Zhejiang'); sendingItems('Zhejiang')">Add To Order List</button>
+                    </li>
+                </ul>
             </div>
         </main>
 

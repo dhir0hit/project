@@ -39,10 +39,34 @@ window.onload = function () {
     grand_total.innerHTML = (itemSubTotal + itemSubTotal * 6 / 100 + itemSubTotal * 14 / 100).toFixed(2);
 }
 
-//
-// window.onchange = function () {
-//     items_sub_total.innerHTML = itemSubTotal;
-//     g_s_t.innerHTML = items_sub_total * 6 / 100;
-//     h_s_t.innerHTML = items_sub_total * 14 / 100;
-//     grand_total.innerHTML = items_sub_total + g_s_t + h_s_t;
-// }
+function placeOrder() {
+    if ($("Grand_Total") === "0") {
+        alertItemOrder('Please', 'place an Order');
+    } else {
+        $("display_order_placed").style.display = "block";
+    }
+}
+
+function alertItemOrder(text, text_) {
+    count++;
+    var alertText = $("alert_text");
+    var alertInfo = $("alert_info");
+    var alertItem = $("alert_items");
+    var alertInfoText = $("alertText");
+
+    // alert_info
+    alertInfo.style.position = "relative";
+
+
+    // alert_info p
+    alertInfo.children[0].style.display = "inline-block";
+
+    // alert_info p strong
+    alertInfo.children[0].children[0].textContent = text;
+    alertInfo.children[0].textContent = text_;
+
+    alertInfo.children[1].onclick = function () {
+        alertInfo.style.opacity = "0";
+        setTimeout(function () {new_alert_info.style.display = "none"}, 600);
+    };
+}
