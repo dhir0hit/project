@@ -49,13 +49,13 @@ function ShowError(idname) {
         is_valid = false;
 
         if (idname === "User_Name" || idname === "first_name" || idname === "last_name") {
-            UserInfoError.innerHTML = "User Name can not be empty";
+            UserInfoError.innerHTML = "Name can not be empty";
         } else if (idname === "User_Password") {
-            UserInfoError.innerHTML = "User Password can not be empty";
+            UserInfoError.innerHTML = "Password can not be empty";
         }
     } else {
         UserInfoError.innerHTML = "*";
-        if (idname === "User_Name") {
+        if (idname === "User_Name" || idname === "first_name" || idname === "last_name") {
             if (containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Special character"}
             else if (isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not be uppercase"}
             else if (containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Digits"}

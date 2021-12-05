@@ -22,9 +22,9 @@ window.onload = function () {
             noOrder = false;
 
             per_item_total = items_price[i] * parseInt(item_numbers);
-            $(element + "_subtotal").innerHTML = per_item_total;
+            $(element + "_subtotal").innerHTML = per_item_total.toFixed(2);
 
-            itemSubTotal += items_price[i] * parseInt(item_numbers);
+            itemSubTotal += per_item_total;
         }
         $(element + "_items").value = item_numbers;
 
