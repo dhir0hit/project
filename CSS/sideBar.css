@@ -74,7 +74,10 @@
     background-color:#009688;
 }
 
-
+@media (max-width: 621px) {
+    #sidebar {
+    }
+}
 
 @keyframes animateleft {
     from

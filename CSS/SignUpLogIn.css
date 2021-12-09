@@ -52,6 +52,7 @@
 #Sign_Log .container {
     padding: 16px;
     width: 100%;
+    display: block;
 }
 
 #Sign_Log .container label {
@@ -131,5 +132,25 @@
     }
     .cancelbtn {
         width: 100%;
+    }
+    #Sign_Log .container label input {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    /*#Sign_Log .container {*/
+    /*    padding: 16px;*/
+    /*    width: 100%;*/
+    /*    display: block;*/
+    /*}*/
+
+    #Sign_Log .container {
+        text-align: center;
+    }
+
+    #Sign_Log .container label {
+        display: inline-block;
+        text-align: left;
     }
 }
