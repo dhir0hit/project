@@ -11,11 +11,7 @@ function alertItemOrder(text) {
     alertItem.appendChild(new_alert_info);
 
     // alert_info
-    // new_alert_info.style.float = "right";
-    // new_alert_info.style.display = "block";
     new_alert_info.style.position = "relative";
-    // new_alert_info.style.marginTop = "{0}rem".format(count);
-
 
     // alert_info p
     new_alert_info.children[0].style.display = "inline-block";

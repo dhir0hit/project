@@ -26,7 +26,6 @@ function containsDigit(string) {
     return isvalid;
 }
 
-
 function containsSpecialChar(string) {
     var isvalid = false;
     var special_Char = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
@@ -50,20 +49,23 @@ function ShowError(idname) {
 
         if (idname === "User_Name" || idname === "first_name" || idname === "last_name") {
             UserInfoError.innerHTML = "Name can not be empty";
+            UserInfoError.style.color = "red";
         } else if (idname === "User_Password") {
             UserInfoError.innerHTML = "Password can not be empty";
+            UserInfoError.style.color = "red";
         }
     } else {
-        UserInfoError.innerHTML = "*";
+        UserInfoError.innerHTML = "&#10004;";
+        UserInfoError.style.color = "green";
         if (idname === "User_Name" || idname === "first_name" || idname === "last_name") {
-            if (containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Special character"}
-            else if (isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not be uppercase"}
-            else if (containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Digits"}
+            if (containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Special character"; UserInfoError.style.color = "red";}
+            else if (isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not be uppercase"; UserInfoError.style.color = "red";}
+            else if (containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "User Name can not contain Digits"; UserInfoError.style.color = "red";}
         }
         if  (idname === "User_Password") {
-            if (!isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain Uppercase"}
-            else if (!containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain number"}
-            else if (!containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain Special character"};
+            if (!isUpperCase(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain Uppercase"; UserInfoError.style.color = "red";}
+            else if (!containsDigit(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain number"; UserInfoError.style.color = "red";}
+            else if (!containsSpecialChar(UserInfo)) {is_valid = false; UserInfoError.innerHTML = "Password should contain Special character"; UserInfoError.style.color = "red";}
         }
     }
 }
@@ -134,7 +136,20 @@ function submitOrder() {
     if (CountryUSA === "") {$("cust_country_Error").textContent = "Country must be Selected"}
     if (CustPhone === "") {$("cust_phone_Error").textContent = "Phone can not be empty"}
 
-    if (FirstName !== "" && LastName !== "" && CustStreet !== "" && CustCity === "" && CustState === "" && ZipCode === "" && CustPhone === "") {
-        
+    if (FirstName != "" && LastName != "" && CustStreet != "" && CustCity != "" && CustState != "" && ZipCode != "" && CustPhone != "") {
+        localStorage.setItem("place_order", true);
+        $("display_order_placed").style.display = "block";
+    }
+}
+
+function validate(idname) {
+    var UserInfo = $(idname).value;
+    var UserInfoError = $(idname + "_Error");
+    if (UserInfo == "" && UserInfo != "cust_street_2" && UserInfo != "cust_email") {
+        UserInfoError.style.color = "red";
+        UserInfoError.innerHTML = "Can not be empty";
+    } else {
+        UserInfoError.innerHTML = "&#10004;";
+        UserInfoError.style.color = "green";
     }
 }

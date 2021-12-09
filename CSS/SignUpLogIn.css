@@ -16,7 +16,7 @@
 }
 
 /* Set a style for all buttons */
-#Sign_Log button, #order_submit_button input {
+#Sign_Log button, #order_submit_button input, #myUL li button {
     background-color: #707793;
     color: white;
     padding: 14px 20px;

@@ -147,23 +147,9 @@ ader-->
 <div class="main_body">
     <div class="Main_Body">
         <main class="content">
-
-            <div id="alert_items">
-                <div class="alert_info_box" id="alert_info">
-                    <p id="alertText"><strong id="alert_text">Please</strong> select an item from menu first</p>
-                    <span class="close_button">&times;</span>
-                </div>
-            </div>
-
             <h1>
                 Order Form
             </h1>
-
-            <div id="display_order_placed">
-                <h1>Order Confirmed</h1>
-                <p>You'll be getting your order within an hour</p>
-
-            </div>
 
             <form>
                 <label for="first_name">Full Name <span>*</span></label>
@@ -174,20 +160,20 @@ ader-->
                 <br>
 
                 <label for="cust_street">Address <span>*</span></label>
-                <input type="text" name="cust_street" id="cust_street" placeholder="Street Address" aria-required="true">
+                <input type="text" name="cust_street" id="cust_street" onkeyup="validate('cust_street')" onkeydown="validate('cust_street')" placeholder="Street Address" aria-required="true">
                 <span id="cust_street_Error"></span>
                 <br>
                 <label for="cust_street_2" hidden=""></label>
                 <input type="text" name="cust-street_2" id="cust_street_2" placeholder="Street Address (Line 2)">
-                <span id="cust_city_Error"></span>
                 <br>
                 <label for="cust_city" hidden=""></label>
-                <input type="text" name="cust_city" id="cust_city" placeholder="City">
-                <input type="text" name="cust_state" id="cust_state" placeholder="state/province" aria-required="true">
+                <input type="text" name="cust_city" id="cust_city"  onkeyup="validate('cust_city')" onkeydown="validate('cust_city')" placeholder="City">
+                <input type="text" name="cust_state" id="cust_state"  onkeyup="validate('cust_state')" onkeydown="validate('cust_state')" placeholder="state/province" aria-required="true">
+                <span id="cust_city_Error"></span>
                 <span id="cust_state_Error"></span>
                 <br>
                 <label for="zip_code" hidden=""></label>
-                <input type="text" name="zipcode" id="zip_code" placeholder="Postal/Zip Code" maxlength="6" aria-required="true">
+                <input type="text" name="zipcode" id="zip_code"  onkeyup="validate('zip_code')" onkeydown="validate('zip_code')" placeholder="Postal/Zip Code" maxlength="6" aria-required="true">
                 <span id="zip_code_Error"></span>
                 <br>
 
@@ -201,16 +187,22 @@ ader-->
 
                 <label for="cust_area_code">Phone Number <span>*</span></label>
                 <input type="text" name="cust_area_code" id="cust_area_code" value="+1">
-                <input type="tel" name="phone" id="cust_phone" placeholder="Phone Number" aria-required="true">
+                <input type="tel" name="phone" id="cust_phone" onkeyup="validate('cust_phone')" onkeydown="validate('cust_phone')" placeholder="Phone Number" aria-required="true">
                 <span id="cust_phone_Error"></span>
                 <br>
 
                 <label for="cust_email">E-mail</label>
                 <input type="email" name="cust_email" id="cust_email" placeholder="xyz@mail.com">
+                <span id="cust_email_Error"></span>
 
                 <br>
                 <label for="cust_feedback" class="feedback">FeedBack</label>
                 <textarea name="cust_feedback" id="cust_feedback"></textarea>
+
+                <div id="display_order_placed">
+                    <h1>Order Confirmed</h1>
+                    <p>You'll be getting your order within an hour</p>
+                </div>
 
                 <br>
                 <input class="submission_button" type="button" onclick="submitOrder()" value="Submit" style="width: 7rem; background-color: #707793; border: none; border-radius: 4px">
@@ -238,6 +230,6 @@ ader-->
     </div>
 </div>
 
-<script type="text/javascript" src="../JavaScript/LogInSignIn.js"></script>
+<script type="text/javascript" src="../JavaScript/FormValidation.js"></script>
 </body>
 </html>

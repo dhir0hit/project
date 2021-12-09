@@ -25,6 +25,10 @@ body {
     display: none;
 }
 
+.main_content h2 {
+    text-transform: uppercase;
+}
+
 .alert_info_box {
     /*display: none;*/
     padding: 1rem 2rem;

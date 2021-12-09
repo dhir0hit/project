@@ -21,12 +21,13 @@ html {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
+    padding: 2rem;
+    overflow: hidden;
 }
 
 .about-section {
     padding: 50px;
     text-align: center;
-    background-color: pink;
     color: black;
 }
 

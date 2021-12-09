@@ -33,22 +33,30 @@ window.onload = function () {
         }
     }
 
-    items_sub_total.innerHTML = itemSubTotal;
+    items_sub_total.innerHTML = itemSubTotal.toFixed(2);
     g_s_t.innerHTML = (itemSubTotal * 6 / 100).toFixed(2);
     h_s_t.innerHTML = (itemSubTotal * 14 / 100).toFixed(2);
     grand_total.innerHTML = (itemSubTotal + itemSubTotal * 6 / 100 + itemSubTotal * 14 / 100).toFixed(2);
-}
 
-function placeOrder() {
-    if ($("Grand_Total") === "0") {
-        alertItemOrder('Please', 'place an Order');
-    } else {
+    //displaying order placed
+    if (localStorage.place_order === "true") {
         $("display_order_placed").style.display = "block";
     }
 }
 
+//displaying order updates
+function placeOrder() {
+    if ($("Grand_Total") === "0") {
+        alertItemOrder('Please', 'place an Order');
+    }
+}
+
+// placing order and adding order is placed
+function orderPlaced() {
+    localStorage.setItem("order_placed", 0);
+}
+
 function alertItemOrder(text, text_) {
-    count++;
     var alertText = $("alert_text");
     var alertInfo = $("alert_info");
     var alertItem = $("alert_items");
